@@ -1,0 +1,36 @@
+{
+  "rows": 66,
+  "by_stage": {
+    "G2/M": 37,
+    "S": 29
+  },
+  "HmID_NO_HIT_rows": [
+    {
+      "stage": "G2/M",
+      "fbgn": "FBgn0030082",
+      "code": "HP1b",
+      "CeuID": "jg15817.t1",
+      "HmID": "NO_HIT"
+    },
+    {
+      "stage": "G2/M",
+      "fbgn": "FBgn0031091",
+      "code": "Phf7",
+      "CeuID": "jg23709.t1",
+      "HmID": "NO_HIT"
+    },
+    {
+      "stage": "S",
+      "fbgn": "FBgn0005655",
+      "code": "PCNA",
+      "CeuID": "jg18228.t1",
+      "HmID": "NO_HIT"
+    }
+  ],
+  "repeated_HmIDs": {
+    "Hmel.Hmel206001oG931": 2,
+    "Hmel.Hmel202001oG331": 2,
+    "Hmel.Hmel206001oG282": 2
+  },
+  "note": "Original values retained; effective features require final assay gene list and scoring warnings."
+}

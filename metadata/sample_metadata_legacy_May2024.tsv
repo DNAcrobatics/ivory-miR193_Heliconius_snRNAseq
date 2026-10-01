@@ -1,0 +1,11 @@
+sample_id	stage_percent_in_May2024_source	genotype_in_May2024_source	source	status
+iv_20	32	wt	archive/original/Iv_v_Wt_comp/wt_vs_ivory_new.May2024.r	historical_not_final_metadata
+iv_33	35	het	archive/original/Iv_v_Wt_comp/wt_vs_ivory_new.May2024.r	historical_not_final_metadata
+iv_38	58	mut	archive/original/Iv_v_Wt_comp/wt_vs_ivory_new.May2024.r	historical_not_final_metadata
+iv_55	46	mut	archive/original/Iv_v_Wt_comp/wt_vs_ivory_new.May2024.r	historical_not_final_metadata
+iv_61	36	mut	archive/original/Iv_v_Wt_comp/wt_vs_ivory_new.May2024.r	historical_not_final_metadata
+Hmm_40	40	wt	archive/original/Iv_v_Wt_comp/wt_vs_ivory_new.May2024.r	historical_not_final_metadata
+Hmr_35	35	wt	archive/original/Iv_v_Wt_comp/wt_vs_ivory_new.May2024.r	historical_not_final_metadata
+Hmr_40	40	wt	archive/original/Iv_v_Wt_comp/wt_vs_ivory_new.May2024.r	historical_not_final_metadata
+Hmr_45	45	wt	archive/original/Iv_v_Wt_comp/wt_vs_ivory_new.May2024.r	historical_not_final_metadata
+Hmr_30	30	wt	archive/original/Iv_v_Wt_comp/wt_vs_ivory_new.May2024.r	historical_not_final_metadata

@@ -1,0 +1,7 @@
+# Documentation template only: original analysis scripts do not consume this yet.
+# Copy to paths.local.toml after the source is adapted to portable paths.
+[paths]
+raw_data = "data/external/raw"
+references = "data/external/references"
+processed_data = "data/processed"
+results = "results"

@@ -1,0 +1,18 @@
+input_id	description	accession_or_url	version	sha256	size_bytes	local_path	source	availability_status
+cell_cycle_mapping	Original mapped cell-cycle table		supplied 2026-10-01	05734fa0730a61751670020e2a4c2534832501a97128eb6ed482e8cbf8409ce9	3461	archive/original/ivory_proj_transfer_aug2025/CellCycleGenes.txt	user inline paste	included_unmodified_values
+Hm_combined.sct.h5seurat	Dependency named in recovered source		pending			pending original location	recovered code	requested_not_supplied
+Hi_wt_v_mut_for_dotplot.txt	Dependency named in recovered source		pending			pending original location	recovered code	requested_not_supplied
+WtVMutInHiLate.Markers_genenames.txt	Dependency named in recovered source		pending			pending original location	recovered code	requested_not_supplied
+HiVsLoLate.markers_naems.txt	Dependency named in recovered source		pending			pending original location	recovered code	requested_not_supplied
+UpGenes_DirectGoEnrichment_PANGEA.csv	Dependency named in recovered source		pending			pending original location	recovered code	requested_not_supplied
+DownGenes_DirectGoEnrichment_PANGEA.csv	Dependency named in recovered source		pending			pending original location	recovered code	requested_not_supplied
+UpGenesLate_DirectGoEnrichment_PANGEA_3.csv	Dependency named in recovered source		pending			pending original location	recovered code	requested_not_supplied
+DownGenesLate_DirectGoEnrichment_PANGEA_3.csv	Dependency named in recovered source		pending			pending original location	recovered code	requested_not_supplied
+HomologGeneNames.txt	Dependency named in recovered source		pending			pending original location	recovered code	requested_not_supplied
+fbgn_fbtr_fbpp_expanded_fb_2024_01.tsv	Dependency named in recovered source		pending			pending original location	recovered code	requested_not_supplied
+Hmel_ribosomal_genes.txt	Dependency named in recovered source		pending			pending original location	recovered code	requested_not_supplied
+Hmel_mito_genenames.txt	Dependency named in recovered source		pending			pending original location	recovered code	requested_not_supplied
+jobs	Dependency named in recovered source		pending			pending original location	recovered code	requested_not_supplied
+Hmel.v3.1.annotation.CAT.MOD.plusMito.reducedIvory.gtf	Dependency named in recovered source		pending			pending original location	recovered code	requested_not_supplied
+PRJNA1404329	snRNA-seq BioProject	PRJNA1404329					supplied manuscript/reporting summaries	reported_run_mapping_pending
+PRJNA1118807	snRNA-seq BioProject	PRJNA1118807					supplied manuscript/reporting summaries	reported_run_mapping_pending

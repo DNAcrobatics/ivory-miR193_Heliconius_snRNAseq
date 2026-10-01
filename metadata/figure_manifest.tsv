@@ -1,0 +1,10 @@
+figure	panel	analysis_component	script	command	inputs	output	manual_steps	status
+5	A-D	02_snrna	archive/original/ivory_proj_transfer_aug2025/ivory_reanalysis.expanded.pasted.r	pending final branch selection	see FILE_REQUESTS.md	Hm.sops.sct.celltypes.pdf;Hm.sops.sct.time.pdf;RaceClusters.pdf	pending	candidate_not_executed
+5	E-F	02_snrna	archive/original/ivory_proj_transfer_aug2025/ivory_reanalysis.expanded.pasted.r	pending final branch selection	see FILE_REQUESTS.md	PhaseClustersEarly.pdf;PhaseClustersLate.pdf	pending	candidate_not_executed
+6	A	05_locus_readthrough	archive/original/ivory_snuc/samtools.sh	pending final branch selection	see FILE_REQUESTS.md	final ribbon output pending	pending	candidate_not_executed
+6	D-G	03_differential_expression	archive/original/ivory_proj_transfer_aug2025/ivory_reanalysis.expanded.pasted.r	pending final branch selection	see FILE_REQUESTS.md	VolcPlotBoth.pdf;VolcPlotBothLate.pdf;DotPlot_HiVsLo.pdf;DotPlot_HiVsLo.Late.pdf	pending	candidate_not_executed
+7	A-B,D-E	03_differential_expression	archive/original/ivory_proj_transfer_aug2025/ivory_reanalysis.expanded.pasted.r	pending final branch selection	see FILE_REQUESTS.md	VolcPlot_WtVMutInHi.pdf;VolcPlot_WtVMutInHi_late.pdf;DotPlot_WtVMutInHi.pdf;DotPlot_WtVMutInHi.Late.pdf	pending	candidate_not_executed
+7	C,F	04_enrichment	archive/original/ivory_proj_transfer_aug2025/ivory_reanalysis.expanded.pasted.r	pending final branch selection	see FILE_REQUESTS.md	GoTermsOut.pdf;GoTermsOutLate.pdf	pending	candidate_not_executed
+S6	all	07_crispr_genotyping	missing	pending final branch selection	see FILE_REQUESTS.md	pending	pending	candidate_not_executed
+S7	all	02_snrna	archive/original/ivory_proj_transfer_aug2025/ivory_reanalysis.expanded.pasted.r	pending final branch selection	see FILE_REQUESTS.md	DimPlots_allHm_merged.pdf;FeaturePlots_allHm_merged.pdf;DotPlot_allHm_merged.pdf	pending	candidate_not_executed
+S8	all	08_figures	archive/original/ivory_proj_transfer_aug2025/ivory_reanalysis.expanded.pasted.r	pending final branch selection	see FILE_REQUESTS.md	Fig_Sx_gene_counts_in_scale_cells_histogram.pdf	pending	candidate_not_executed
