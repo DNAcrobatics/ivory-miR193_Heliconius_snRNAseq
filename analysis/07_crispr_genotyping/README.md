@@ -1,5 +1,7 @@
-# 07_crispr_genotyping
+# Workflow guide
 
-Nanopore processing, mapping, depth and genotype summaries.
+The annotated workflows now live in `analyses/`.
 
-Related source snapshots are preserved in `../../archive/`. Consult `../../docs/FIGURE_MAP.md` and `../../docs/FILE_REQUESTS.md` for recovered candidates and missing inputs. Runnable commands will be added after final branch selection and validation.
+- [Nanopore CRISPR genotyping](../../analyses/11_nanopore_crispr_genotyping.md)
+
+See the [paper analysis index](../../README.md#analysis-index) and [complete file requests](../../docs/FILE_REQUESTS.md).

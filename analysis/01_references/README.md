@@ -1,5 +1,7 @@
-# 01_references
+# Workflow guide
 
-Reference preparation, annotation edits, gene-ID and orthology mapping.
+The annotated workflows now live in `analyses/`.
 
-Related source snapshots are preserved in `../../archive/`. Consult `../../docs/FIGURE_MAP.md` and `../../docs/FILE_REQUESTS.md` for recovered candidates and missing inputs. Runnable commands will be added after final branch selection and validation.
+- [Reference genome and annotation](../../analyses/01_reference_preparation.md)
+
+See the [paper analysis index](../../README.md#analysis-index) and [complete file requests](../../docs/FILE_REQUESTS.md).

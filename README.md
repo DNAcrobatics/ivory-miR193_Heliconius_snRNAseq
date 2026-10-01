@@ -1,49 +1,56 @@
-# ivory:mir-193 — paper analysis code
+# Code for *The gene ivory:mir-193 controls scale type differentiation in Heliconius butterflies*
 
-Code collection for **The gene ivory:mir-193 controls scale type differentiation in Heliconius butterflies** (Hanly and colleagues; Nature Communications; final citation pending).
+Companion code collection for the Nature Communications paper. **Start with the analysis index below.** The repository follows the numbered, annotated workflow format of [Luca’s Anticarsia melanism repository](https://github.com/MilesLuca/Anticarsia_melanism).
 
-**Status: original source collected in part; publication release not yet runnable.** Five source snapshots and the cell-cycle input table are preserved in `archive/`. Source provenance, unresolved dependencies and manuscript/code differences are documented. No biological result has been reproduced yet. See [the intake review](docs/INTAKE_REVIEW.md).
+Each workflow documents inputs, outputs, software, execution and recovered code. **This is an initial collation, not yet a complete reproduction package.** Supplied scripts and session fragments are preserved; missing sources and unresolved final-analysis choices are explicitly marked.
 
-## Organization
+- **Code and execution guide:** [README_code.md](README_code.md)
+- **Data and naming conventions:** [README_DATASET.TXT](README_DATASET.TXT)
+- **Outstanding files:** [complete file request checklist](docs/FILE_REQUESTS.md)
+- **Figure coverage:** [figure-to-code map](docs/FIGURE_MAP.md)
+- **Provenance and validation:** [VALIDATION.md](VALIDATION.md), [source checksums](SOURCE_SHA256SUMS.txt)
+- **Citation:** [CITATION.cff](CITATION.cff), pending final publication details and archive DOI
+- **License:** awaiting your choice; see [license decision](docs/LICENSE_DECISION.md)
 
-| Location | Purpose |
-|---|---|
-| `analysis/01_references/` | Reference preparation, annotation edits, orthology and gene identifiers |
-| `analysis/02_snrna/` | STARsolo, QC, integration, clustering, annotation and cell-cycle scoring |
-| `analysis/03_differential_expression/` | Exact early/late and high/low ivory comparisons and tests |
-| `analysis/04_enrichment/` | Final GO/phenotype enrichment workflow and plotting |
-| `analysis/05_locus_readthrough/` | Barcode selection, strand-specific coverage and locus tracks |
-| `analysis/06_candidate_targets/` | miRNA target prediction and cross-species overlaps, if used in final paper |
-| `analysis/07_crispr_genotyping/` | Nanopore basecalling, mapping, coverage and genotype summaries |
-| `analysis/08_figures/` | Figure exporters and any programmatic final assembly |
-| `metadata/` | Sample, contrast, figure and provenance manifests |
-| `config/` | Portable path configuration templates |
-| `envs/` | Actual environment exports and software version records, once supplied |
-| `data/` | Small reproducibility inputs, with accession manifests for external data |
-| `docs/` | Collection checklist, figure map, execution plan and release criteria |
-| `tools/` | Utilities for assembling this archive |
-| `archive/` | Received originals and exploratory versions, preserved with provenance |
+## Analysis index
 
-Start with [the file request checklist](docs/FILE_REQUESTS.md). [The figure map](docs/FIGURE_MAP.md) links the earlier manuscript panels to the expected analysis components. It now follows the supplied `FinalEdits_Ivory_d78k_scRNAseq_.docx` and supplementary figures; final panel/output matching remains pending.
+| Annotated workflow | Paper connection | Current availability |
+| --- | --- | --- |
+| [01. Reference genome and annotation](analyses/01_reference_preparation.md) | Alignment and all gene-based analyses | Source needed |
+| [02. Single-nucleus alignment and counting](analyses/02_starsolo_counts.md) | Upstream of Figures 5–7 and S7–S8 | Historical script |
+| [03. Count import, QC and integration](analyses/03_snrna_qc_integration.md) | Full dataset underlying Figures 5–7 and S7 | Historical script; final builder needed |
+| [04. SOP lineage integration and annotation](analyses/04_sop_lineage_annotation.md) | Figure 5A–D; Supplementary Figure S7 | Session fragments |
+| [05. Cell-cycle scoring and phase plots](analyses/05_cell_cycle.md) | Figure 5E/F | Scoring code and gene mapping supplied |
+| [06. Define ivory-high and ivory-low scale nuclei](analyses/06_ivory_high_low.md) | Figures 5E/F and 6–7 | Alternative branches; final choice needed |
+| [07. Early and late differential expression](analyses/07_differential_expression.md) | Figure 6D–G and Figure 7A/B/D/E | Session fragments; final tests unresolved |
+| [08. Gene mapping, GO enrichment and plotting](analyses/08_go_enrichment.md) | Figure 7C/F | Plotting supplied; enrichment provenance needed |
+| [09. Strand-specific ivory locus coverage](analyses/09_locus_readthrough.md) | Figure 6A | Partial historical BAM processing |
+| [10. Candidate miR-193 target prediction](analyses/10_mir193_targets.md) | Figure 7 target highlighting | Gene list supplied; prediction code needed |
+| [11. Nanopore CRISPR genotyping](analyses/11_nanopore_crispr_genotyping.md) | Supplementary Figure S6 | Source needed |
+| [12. Aggregate expression and ivory ranking](analyses/12_expression_ranking.md) | Supplementary Figure S8 | Session fragments |
 
-## Reproduction plan
+Figures 1–4 and S1–S5 largely involve experiments, images, schematics and manual assembly. Their source material and any computational steps are tracked in the [figure map](docs/FIGURE_MAP.md), rather than represented by invented analysis code.
 
-We will support two entry points: (1) regenerate paper plots and tables from frozen processed inputs, and (2) rerun upstream processing from public raw reads and pinned references. Each component will declare inputs, outputs, software versions, parameters and run order. Cluster submission scripts will accompany the underlying commands; readers should not need your HPC account to understand the computation.
+## Using the code
 
-The intended scientific order is documented in [REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md). Runnable commands will be added only after the original source and its inputs have been inspected. Existing numerical script names and originals will retain a provenance mapping when reorganized.
+1. Choose a workflow from the index and read its status and prerequisites.
+2. Obtain its inputs and the exact environment. Large reads, BAMs and Seurat objects belong in external data archives, with locations and checksums recorded in [the data manifest](metadata/data_manifest.tsv).
+3. Use the linked original script or recovered code block. Blocks currently retain historical paths, variable names and session dependencies; they are not all standalone scripts. Source-needed pages identify the code still to recover.
+4. Confirm the final sample metadata, parameter branch and contrast definitions before replacing historical paths or submitting jobs.
+5. Save results with their software logs and compare them with the final figure source tables and vector PDFs.
 
-## Data
+The main dependencies are reference preparation → alignment/counts → full-object integration → lineage annotation → classification/contrasts → plots. Cell-cycle scoring, coverage, target prediction and genotyping have separate prerequisites documented on their pages.
 
-The supplied manuscript and reporting summaries list snRNA-seq BioProjects **PRJNA1404329** and **PRJNA1118807**. These are manuscript-reported identifiers, not yet verified download manifests. Individual run accessions and their sample mappings are still needed. Large reads, BAMs, reference indexes and analysis objects will be stored externally with documented accessions or download locations and checksums. Small required lookup tables and plotting inputs can live here.
+## Data and naming conventions
 
-## Citation and license
+Public sequencing resources cited during intake: [PRJNA1404329](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1404329) and [PRJNA1118807](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1118807). Run-to-sample mappings and file checksums still need to be recovered.
 
-`CITATION.cff` contains a provisional paper title and author entry. Replace with the final citation and code-release identifier before publication. A code license has not been selected; see `docs/LICENSE_DECISION.md`. Publication of this scaffold does not itself grant an open-source license.
+Historical sample times and labels in [sample_metadata_legacy_May2024.tsv](metadata/sample_metadata_legacy_May2024.tsv) are preserved as historical values. The [final sample manifest](metadata/sample_manifest.tsv) awaits confirmed metadata; revised paper stages must not be inferred from sample names.
 
-## Repository
+Keep native feature identifiers, including `Ivory`, as used in each assay. Gene-symbol joins, coordinate conventions and custom annotation edits must accompany the final workflows.
 
-https://github.com/Hanliconius/ivory-mir193_paper
+## Completing this collection
 
-## Latest intake
+The [file request checklist](docs/FILE_REQUESTS.md) gives filenames, priorities and the decisions each file resolves. The [collection helper](tools/collect_project_code.py) can collect code and small text inputs from your project directories. Original snapshots remain in [archive/](archive/README.md); manifests and intake notes remain in `metadata/` and `docs/`.
 
-The next requests are the producer of `Hm_combined.sct.h5seurat`, the exact small lookup/GO files named in the recovered code, final sample/per-cell metadata and saved DE/source-data tables. Read [FILE_REQUESTS.md](docs/FILE_REQUESTS.md) for the precise filenames and a batch collection command. The original R snapshots contain incomplete/session-dependent code and are not offered as release entry points. The source manuscripts were inspected but are not included in this code archive.
+Before release, recover the remaining source, resolve the final analysis choices, validate against paper outputs, choose a license, and archive a versioned release with a DOI. No archive DOI or validated final environment is claimed yet.

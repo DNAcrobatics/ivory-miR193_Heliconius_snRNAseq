@@ -1,5 +1,7 @@
-# 04_enrichment
+# Workflow guide
 
-Final GO/phenotype enrichment implementation, inputs, background and visualization.
+The annotated workflows now live in `analyses/`.
 
-Related source snapshots are preserved in `../../archive/`. Consult `../../docs/FIGURE_MAP.md` and `../../docs/FILE_REQUESTS.md` for recovered candidates and missing inputs. Runnable commands will be added after final branch selection and validation.
+- [Gene mapping, GO enrichment and plotting](../../analyses/08_go_enrichment.md)
+
+See the [paper analysis index](../../README.md#analysis-index) and [complete file requests](../../docs/FILE_REQUESTS.md).

@@ -1,5 +1,9 @@
-# 08_figures
+# Workflow guide
 
-Final plotting/export and programmatic assembly; record manual assembly separately.
+The annotated workflows now live in `analyses/`.
 
-Related source snapshots are preserved in `../../archive/`. Consult `../../docs/FIGURE_MAP.md` and `../../docs/FILE_REQUESTS.md` for recovered candidates and missing inputs. Runnable commands will be added after final branch selection and validation.
+- [SOP lineage integration and annotation](../../analyses/04_sop_lineage_annotation.md)
+- [Early and late differential expression](../../analyses/07_differential_expression.md)
+- [Aggregate expression and ivory ranking](../../analyses/12_expression_ranking.md)
+
+See the [paper analysis index](../../README.md#analysis-index) and [complete file requests](../../docs/FILE_REQUESTS.md).

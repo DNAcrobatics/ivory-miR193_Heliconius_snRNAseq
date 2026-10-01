@@ -1,5 +1,7 @@
-# 05_locus_readthrough
+# Workflow guide
 
-Cell/barcode selection and strand-specific coverage/ivory locus tracks.
+The annotated workflows now live in `analyses/`.
 
-Related source snapshots are preserved in `../../archive/`. Consult `../../docs/FIGURE_MAP.md` and `../../docs/FILE_REQUESTS.md` for recovered candidates and missing inputs. Runnable commands will be added after final branch selection and validation.
+- [Strand-specific ivory locus coverage](../../analyses/09_locus_readthrough.md)
+
+See the [paper analysis index](../../README.md#analysis-index) and [complete file requests](../../docs/FILE_REQUESTS.md).
