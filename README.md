@@ -18,7 +18,7 @@ Each workflow documents inputs, outputs, software, execution and recovered code.
 | --- | --- | --- |
 | [01. Reference genome and annotation](analyses/01_reference_preparation.md) | Alignment and all gene-based analyses | Source needed |
 | [02. Single-nucleus alignment and counting](analyses/02_starsolo_counts.md) | Upstream of Figures 5–7 and S7–S8 | Historical script |
-| [03. Count import, QC and integration](analyses/03_snrna_qc_integration.md) | Full dataset underlying Figures 5–7 and S7 | Historical script; final builder needed |
+| [03. Count import, QC and integration](analyses/03_snrna_qc_integration.md) | Full dataset underlying Figures 5–7 and S7 | Integration/save tail recovered; upstream setup needed |
 | [04. SOP lineage integration and annotation](analyses/04_sop_lineage_annotation.md) | Figure 5A–D; Supplementary Figure S7 | Session fragments |
 | [05. Cell-cycle scoring and phase plots](analyses/05_cell_cycle.md) | Figure 5E/F | Scoring code and gene mapping supplied |
 | [06. Define ivory-high and ivory-low scale nuclei](analyses/06_ivory_high_low.md) | Figures 5E/F and 6–7 | Alternative branches; final choice needed |

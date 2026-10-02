@@ -9,3 +9,7 @@ Two attached text files were copied byte-for-byte, with both versions retained. 
 RNAhybrid/cross-species comparisons are confirmed in the supplied manuscript. Reported software versions are labeled as reported, not verified runtime versions. Sample metadata from the historical May 2024 source remains in a separate legacy manifest and has not been promoted to the final sample sheet.
 
 No analysis has been rerun and no public archive release has been created. The collection is being uploaded to the private repository `Hanliconius/ivory-mir193_paper` under the user's instruction. R is unavailable in this execution workspace. Static review and shell/collection/archive checks are the extent of validation so far.
+
+Received `iv_v_wt_timeseries_March2025/rscript.regressingTime.R` as an inline paste and `Iv_v_Wt_comp/wt_vs_ivory_scales.r` as an attached terminal transcript. The latter attachment is retained byte-for-byte; only its first listing and cat prompt are removed in the extracted .r. Internal console prompts, printed results and exploratory branches remain unchanged.
+
+The March source is transcribed with no logic changes. Both new scientific sources were inspected statically; no analysis was run. The file requests now distinguish a recovered integration/save tail from missing upstream setup.

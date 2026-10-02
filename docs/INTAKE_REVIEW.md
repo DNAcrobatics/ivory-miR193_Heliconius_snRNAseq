@@ -1,6 +1,6 @@
 # Intake review on 2026-10-01
 
-The repository now contains five source snapshots and one cell-cycle input table. The two attached text originals are retained unchanged. Manuscript/editorial documents were inspected as scope evidence; they are not copied into this code archive.
+The repository now contains seven scientific script/session snapshots and one cell-cycle input table. The two attached text originals are retained unchanged. Manuscript/editorial documents were inspected as scope evidence; they are not copied into this code archive.
 
 ## What the source establishes
 
@@ -14,7 +14,7 @@ RNAhybrid and cross-species target comparisons are now confirmed parts of the ma
 
 ## Main execution gaps
 
-- `Hm_combined.sct.h5seurat` is loaded at the start; its producing script is missing. The May 2024 source saves a differently named `Iv_combined.full.sct` and does not import all time-series samples used later.
+- `Hm_combined.sct.h5seurat` is loaded at the start; an integration-and-save script has now been supplied (see the additional intake below), but its upstream Hm_merged setup and final-run confirmation are still missing. The May 2024 source saves a differently named `Iv_combined.full.sct` and does not import all time-series samples used later.
 - Both R snapshots contain literal prose and incomplete code. The longer one includes an unfinished `FindNeighbors` call, shell/awk commands and an incomplete `Ivory > 0.5 &` expression. It also references session variables before their definitions.
 - High/low definitions differ across branches: raw/log-normalized RNA thresholds vs an ivory-normalized assay. The assay-building block appears after several analyses and is followed by incomplete assignment code; final branch order cannot be inferred safely.
 - `WtVMutInHi.Markers2` is computed while neighboring plotting code refers to `WtVMutInHi.Markers`. The saved table is needed to resolve this session dependency.
@@ -34,3 +34,13 @@ The manuscript's Code Availability points to the Hanliconius GitHub profile. The
 ## Validation status
 
 Original attachment bytes/checksums and extracted terminal body verified; inline table structure checked; both shell scripts checked with `bash -n`; archive integrity and internal Markdown links checked. R is unavailable in this workspace, so no R parse/runtime test or biological analysis rerun has been performed. Static defects are documented rather than hidden by replacing the source.
+
+## Additional source intake — 2026-10-01 evening EDT
+
+Received `iv_v_wt_timeseries_March2025/rscript.regressingTime.R` as an inline paste and `Iv_v_Wt_comp/wt_vs_ivory_scales.r` as an attached terminal transcript. The latter attachment is retained byte-for-byte; only its first listing and cat prompt are removed in the extracted .r. Internal console prompts, printed results and exploratory branches remain unchanged.
+
+The March source contains the active integration-and-save tail for the `Hm_combined.sct` basename: assign race from orig.ident; split by race; select 6,000 integration features; SCT anchor integration; 50 computed PCs; UMAP/neighbors on PCs 1–4; resolution 1; PrepSCTFindMarkers; SaveH5Seurat. This narrows the missing builder request but does not establish that this exact branch produced the final object. No active load/import or SCTransform creates Hm_merged: its matrix import, metadata, merge, QC and time-regressed SCT steps are all commented. Recover the code/session setup that creates Hm_merged with the required SCT state, plus an executed log or final-object provenance. The filename alone does not establish that time regression ran.
+
+The commented full merge lists 17 samples and excludes Hmr_5i. Its historical mutant times are 32/35/56/46/36, not confirmed final metadata. The active race assignment labels three Hmm samples mal, five iv samples iv and all others ros. Confirm the actual sample inventory rather than treating the commented merge as the executed cohort.
+
+The May 2023 scales source uses nine matrices, min.cells=30/min.features=1000, per-sample SCT with glmGamPoi and nCount_RNA regression, 3,000 integration features, ten PCs and resolution 0.5 in its first branch, and later cell-cycle trials. PrepSCTIntegration references object.list rather than the constructed wing.list, and the file contains internal R prompts and printed results. It is historical session source, not a complete final script; its apparent parameter overlap with the manuscript does not prove final use.

@@ -2,7 +2,7 @@
 
 **Paper:** Full dataset underlying Figures 5–7 and S7.
 
-**Status:** Historical script; final builder needed.
+**Status:** Historical import and March integration/save tail; upstream setup needed.
 
 Document matrix import and recover the full integrated object used for the paper.
 
@@ -14,7 +14,7 @@ Document matrix import and recover the full integrated object used for the paper
 
 ## Outputs
 
-- Historical `Iv_combined.full.sct` object; final `Hm_combined.sct.h5seurat` builder remains missing.
+- Historical `Iv_combined.full.sct` object; final `Hm_combined.sct.h5seurat` integration/save tail is now recovered; upstream setup and final-run confirmation remain missing.
 
 ## Software
 
@@ -22,7 +22,7 @@ R, Seurat, SeuratDisk, sctransform, ggplot2, dplyr and patchwork; exact package 
 
 ## Execution and interpretation
 
-This May 2024 branch imports ten samples and sets historical times/genotypes. It uses 5,000 variable features, eight PCs and resolution 1. These differ from manuscript settings and the later SOP branch. It cannot substitute for the missing full-object builder. `min.features=2000` at object creation precedes the later >200-feature filter. Confirm metadata and the final parameter set before rerunning.
+This May 2024 branch imports ten samples and sets historical times/genotypes. It uses 5,000 variable features, eight PCs and resolution 1. These differ from manuscript settings and the later SOP branch. It cannot substitute for the missing upstream setup of the later full object. `min.features=2000` at object creation precedes the later >200-feature filter. Confirm metadata and the final parameter set before rerunning.
 
 See [intake review](../docs/INTAKE_REVIEW.md) for unresolved decisions and [file requests](../docs/FILE_REQUESTS.md) for the complete acquisition checklist.
 
@@ -148,3 +148,44 @@ SaveH5Seurat(Iv.combined.sct, 'Iv_combined.full.sct', overwrite = TRUE, verbose 
 
 
 [Return to analysis index](../README.md#analysis-index).
+
+## March 2025 integration-and-save tail — newly received
+
+**Source:** [rscript.regressingTime.R](../archive/original/iv_v_wt_timeseries_March2025/rscript.regressingTime.R). **Status:** matching output basename; partial builder with session dependencies. The source has no active import or SCTransform. Run order, input Hm_merged state, final metadata and whether this branch made the paper object still need confirmation. In a fresh R session Hm_merged is undefined.
+
+Active settings are 6,000 integration features, 50 computed PCs, four PCs for UMAP/neighbors and resolution 1; these remain distinct from manuscript settings. All upstream time-regression calls are commented. The tail below is an exact excerpt from the transcribed source, with no repairs.
+
+```r
+Hm_merged$race <- ifelse(Hm_merged$orig.ident == "Hmm_10" | Hm_merged$orig.ident == "Hmm_25" | Hm_merged$orig.ident == 'Hmm_40', "mal", ifelse(Hm_merged$orig.ident == 'iv_20' | Hm_merged$orig.ident == 'iv_33' | Hm_merged$orig.ident == 'iv_38' | Hm_merged$orig.ident == 'iv_55' | Hm_merged$orig.ident == 'iv_61','iv','ros'))
+
+
+Hm_list <- SplitObject(Hm_merged, split.by = "race")
+#######Hm_list <- lapply(X = Hm_list, FUN = SCTransform)
+features <- SelectIntegrationFeatures(object.list = Hm_list, nfeatures = 6000)
+Hm_list <- PrepSCTIntegration(object.list = Hm_list, anchor.features = features)
+
+Hm.anchors <- FindIntegrationAnchors(object.list = Hm_list, normalization.method = "SCT",   anchor.features = features)
+Hm.combined.sct <- IntegrateData(anchorset = Hm.anchors, normalization.method = "SCT")
+
+Hm.combined.sct <- RunPCA(Hm.combined.sct,  npcs = 50, verbose = T)
+Hm.combined.sct <- RunUMAP(Hm.combined.sct,  dims = 1:4)
+Hm.combined.sct <- FindNeighbors(Hm.combined.sct, dims = 1:4)
+Hm.combined.sct <- FindClusters(Hm.combined.sct, resolution = 1)
+
+
+
+
+## plot pc1 vs time
+#plt_dat <- FetchData(Hm.combined.sct, c("PC_1","PC_2", "time","orig.ident","seurat_clusters"))
+#png(file='pc1_vs_time.png')
+#ggplot(plt_dat, aes(time, PC_1)) +
+#  geom_jitter(aes(color = orig.ident)) +
+#  labs(y = "PC1")
+#dev.off()
+
+Hm.combined.sct <- PrepSCTFindMarkers(Hm.combined.sct)
+
+SaveH5Seurat(Hm.combined.sct, 'Hm_combined.sct', overwrite = TRUE, verbose = TRUE)
+```
+
+The [older wt_vs_ivory_scales.r](../archive/original/Iv_v_Wt_comp/wt_vs_ivory_scales.r) is also now archived. It contains nine-sample import, cell-cycle trials and exploratory contrasts, along with literal R console output and an unresolved object.list reference. It has not been promoted to the final workflow.

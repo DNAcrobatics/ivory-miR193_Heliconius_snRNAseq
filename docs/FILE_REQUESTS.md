@@ -14,6 +14,8 @@ Updated 2026-10-01 after inspecting the manuscript, supplementary figures, repor
 | `starsolo.sh` | STARsolo command, read order, barcode/UMI lengths and counting settings | `jobs`, edited GTF, reference build, logs and final BAM-producing command missing |
 | `samtools.sh` | Locus/strand commands in comments plus active spliced-read extraction | `list` assignment and prerequisite commands commented out; not a complete locus-track workflow |
 | `wt_vs_ivory_new.May2024.r` | Historical import/QC/integration for ten samples | Creates `Iv_combined.full.sct`, not the `Hm_combined.sct.h5seurat` loaded by later code |
+| `rscript.regressingTime.R` | Matching combined-object integration/save tail | Needs pre-existing SCT-prepared Hm_merged; upstream blocks commented; final run unconfirmed |
+| `wt_vs_ivory_scales.r` | Historical nine-sample scale/cell-cycle analysis | Session prompts/results and undefined object.list; not final workflow |
 | `CellCycleGenes.txt` | Full 66-row mapping table, including original `NO_HIT` and duplicated Hmel IDs | Need actual feature IDs used/returned warnings; source table preserved unchanged |
 
 Original snapshots and their checksums are in `archive/` and `metadata/received_source_manifest.tsv`. They are not yet executable publication workflows. Input/output filename references have been indexed separately.
@@ -22,13 +24,13 @@ Original snapshots and their checksums are in `archive/` and `metadata/received_
 
 ### 1. Code that created the combined object
 
-Send the script(s) that wrote **`Hm_combined.sct.h5seurat`**, including full wild-type time-series import, updated Piano Keys metadata, QC and integration. This is the main upstream dependency for both pasted analysis versions. It may be in `ivory_proj_transfer_aug2025`, `iv_v_wt_timeseries_March2025` or `iv_relignment_reanalysis`; search for the exact object filename. Also send any script that generated a final **`Hm.sops.sct.h5seurat`**, `Hm_sops.h5seurat` or an equivalent RDS used for the paper. Initially, an object filename/size manifest plus its per-cell metadata is enough; large objects can follow if needed.
+The integration-and-save tail is now supplied as **`iv_v_wt_timeseries_March2025/rscript.regressingTime.R`**. It saves the matching `Hm_combined.sct` basename but assumes an existing SCT-prepared `Hm_merged`; all import, merge, QC and SCTransform steps are commented. **Send the code or session setup that created that `Hm_merged`**, including full time-series import, corrected metadata and SCT/time-regression state. Also supply a run log or final-object provenance confirming which settings produced the object loaded by the paper analysis. This is the main upstream dependency for both pasted analysis versions. It may be in `ivory_proj_transfer_aug2025`, `iv_v_wt_timeseries_March2025` or `iv_relignment_reanalysis`; search for the exact object filename. Also send any script that generated a final **`Hm.sops.sct.h5seurat`**, `Hm_sops.h5seurat` or an equivalent RDS used for the paper. Initially, an object filename/size manifest plus its per-cell metadata is enough; large objects can follow if needed.
 
 Send these already-listed source files from `Iv_v_Wt_comp` as well:
 
 - `rscript.loop.r`
 - `rscript.r`
-- `wt_vs_ivory_scales.r`
+- `wt_vs_ivory_scales.r` — now received; no need to resend
 
 The May 2024 script is already transcribed. Supplying actual script files in a bundle later will let us verify transcription and recover timestamps, but is not the next blocker.
 
@@ -151,11 +153,11 @@ Add a root for the RNAhybrid and Nanopore work if those are elsewhere. `he_ts` r
 | ID | Status after this intake | Still required |
 |---|---|---|
 | R01 Manuscript/figures | Manuscript, main legends and supplement S1–S8 received | Source-data tables, final exported panel files/assemblies, repository/release details |
-| R02 Code | Five analysis/script snapshots received | Upstream object builder, remaining candidates, readthrough, RNAhybrid and Nanopore scripts |
+| R02 Code | Seven analysis/script snapshots received | Upstream Hm_merged setup (integration/save tail received), remaining candidates, readthrough, RNAhybrid and Nanopore scripts |
 | R03 Samples | Historical May 2024 values recovered | Final corrected sample/run and per-cell metadata |
 | R04 References | Exact reduced-ivory GTF path and mapping dependencies identified | Edited GTF, build code, FASTA manifest, gene/orthology tables |
 | R05 Alignment | STARsolo snapshot received | `jobs`, final reference/index build, version/logs and BAM/barcode output command |
-| R06 Seurat/cell cycle | Lineage/plotting code and cell-cycle mapping received | Final combined-object builder, final assignments/objects, helper definitions |
+| R06 Seurat/cell cycle | Lineage/plotting code and cell-cycle mapping received | Final Hm_merged setup and executed integration branch, final assignments/objects, helper definitions |
 | R07 DE | Four main contrast candidate calls identified | Final assay/threshold/replicate description, saved full tables and group metadata |
 | R08 Enrichment | Plotting code and four CSV basenames identified | Actual CSVs and their generation/settings/background/correction |
 | R09 Locus tracks | Partial historical samtools commands received | Barcode selection, full depth/strand pipeline and final coverage/ribbon inputs |
