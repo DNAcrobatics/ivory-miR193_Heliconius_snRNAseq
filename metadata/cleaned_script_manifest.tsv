@@ -1,0 +1,14 @@
+repository_path	sha256	treatment	validation_status
+scripts/alignment/starsolo.sh	1c07aee4bf5791f69c0190288bba05331116df1c3eaf7548d9dff7b1ebb8d2cc	cleaned/adapted from supplied source; see scripts/README.md and CLEANUP_NOTES.md	shell syntax and mock-tool checks
+scripts/lib/common.R	05ae72cef22d11dc733a936ab11566b67ecdbfb8ad5207816a6dab3795f2df75	cleaned/adapted from supplied source; see scripts/README.md and CLEANUP_NOTES.md	manual review; R runtime unavailable
+scripts/locus/extract_spliced_reads.sh	46606976a24d406d720063f74af5dfea7435d80fb334cf51051a813e8f4e148c	cleaned/adapted from supplied source; see scripts/README.md and CLEANUP_NOTES.md	shell syntax and mock-tool checks
+scripts/plots/dotplot.R	b693fb36d6a942d8f5551c8dee24f03168b07b8dd9612718549ae98ff45c2f12	cleaned/adapted from supplied source; see scripts/README.md and CLEANUP_NOTES.md	manual review; R runtime unavailable
+scripts/plots/go_enrichment.R	35f1dbf4e543aad467653123c58ead5ef7014d8824713c84ba5aaebcc34fd394	cleaned/adapted from supplied source; see scripts/README.md and CLEANUP_NOTES.md	manual review; R runtime unavailable
+scripts/plots/lineage_panels.R	bff184aca584a0f8671df71dc69bbe5a9660cb68c962cf953c1c982a1271cb70	cleaned/adapted from supplied source; see scripts/README.md and CLEANUP_NOTES.md	manual review; R runtime unavailable
+scripts/plots/volcano.R	70f59292600385d01d3b10d3bcb106d443a9a4444fcd2ccb628aaf8ac28a3f71	cleaned/adapted from supplied source; see scripts/README.md and CLEANUP_NOTES.md	manual review; R runtime unavailable
+scripts/snrna/01_import_qc_sct.R	4fbb01c08547fe99bd93afb49c23a64738fc2bd24d4cff71a0691fb77c17b402	cleaned/adapted from supplied source; see scripts/README.md and CLEANUP_NOTES.md	manual review; R runtime unavailable
+scripts/snrna/02_integrate.R	668012b5f4208832202b4ae788c7856ba41f14054e54d0fb22759e1110146ce1	cleaned/adapted from supplied source; see scripts/README.md and CLEANUP_NOTES.md	manual review; R runtime unavailable
+scripts/snrna/03_cell_cycle.R	bd37096198ba982009362f2b0703bb956eb9f45811383f067b09211ad191affc	cleaned/adapted from supplied source; see scripts/README.md and CLEANUP_NOTES.md	manual review; R runtime unavailable
+scripts/snrna/04_classify_ivory.R	66df08d935de2bd522d5f3e2796c6b1675b2073e9fc4d5c4e4ff2d8337f71997	cleaned/adapted from supplied source; see scripts/README.md and CLEANUP_NOTES.md	manual review; R runtime unavailable
+scripts/snrna/05_find_markers.R	ee28206b9a3b373e4ecf1e908dac66c6efe1b858d7fb5f9f737394815408b6f4	cleaned/adapted from supplied source; see scripts/README.md and CLEANUP_NOTES.md	manual review; R runtime unavailable
+scripts/snrna/06_expression_ranking.R	90ec16e36e793afc95fa6e8e7587caa4c69d7c265323cdca862dcb60e3bed15c	cleaned/adapted from supplied source; see scripts/README.md and CLEANUP_NOTES.md	manual review; R runtime unavailable

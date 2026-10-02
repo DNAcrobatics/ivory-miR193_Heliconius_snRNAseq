@@ -2,7 +2,7 @@
 
 **Paper:** Figure 5A–D; Supplementary Figure S7.
 
-**Status:** Session fragments.
+**Status:** cleaned scripts supplied; final inputs/settings and result matching pending.
 
 Recover the SOP/scale/socket lineage objects, annotations and UMAP panels.
 
@@ -25,36 +25,13 @@ The recovered code contains several alternative UMAP/integration trials. The 7,0
 
 See [intake review](../docs/INTAKE_REVIEW.md) for unresolved decisions and [file requests](../docs/FILE_REQUESTS.md) for the complete acquisition checklist.
 
-## Code
+## Cleaned code and execution
 
-### Recovered lineage integration branch
+- [02_integrate.R](../scripts/snrna/02_integrate.R)
+- [lineage_panels.R](../scripts/plots/lineage_panels.R)
 
-**Source:** [ivory_reanalysis.expanded.pasted.r, lines 145–164](../archive/original/ivory_proj_transfer_aug2025/ivory_reanalysis.expanded.pasted.r#L145-L164).
+Supply the final SOP barcode selection via --cells and the confirmed integration settings. A complete integration step repairs the missing FindNeighbors parenthesis. Final cell-type labels must already be in the input metadata; they are not inferred from exploratory cluster trials.
 
-**Archive treatment:** exact excerpt; no syntax repairs, parameter changes, or inferred session setup. This is a recovered session fragment, not a standalone script.
-
-```r
-Hm_list <- SplitObject(Hm_sops, split.by = "race")
-#######Hm_list <- lapply(X = Hm_list, FUN = SCTransform)
-features <- SelectIntegrationFeatures(object.list = Hm_list, nfeatures = 7000)
-Hm_list <- PrepSCTIntegration(object.list = Hm_list, anchor.features = features)
-
-Hm.anchors <- FindIntegrationAnchors(object.list = Hm_list, normalization.method = "SCT",
-    anchor.features = features)
-Hm.sops.sct <- IntegrateData(anchorset = Hm.anchors, normalization.method = "SCT")
-
-##SaveH5Seurat(Hm.sops.sct, 'Hm.sops.sct', overwrite = TRUE, verbose = TRUE)
-##Hm.sops.sct <- LoadH5Seurat('Hm.sops.sct.h5seurat')
-
-### so far, 1:3 works best
-#Hm.sops.sct <- subset(Hm.sops.sct, seurat_clusters %ni% c(16,19))
-DefaultAssay(Hm.sops.sct) <- 'integrated'
-Hm.sops.sct <- RunPCA(Hm.sops.sct,  npcs = 50, verbose = F)
-Hm.sops.sct <- RunUMAP(Hm.sops.sct,dims = c(1:3))
-Hm.sops.sct <- FindNeighbors(Hm.sops.sct, dims =  c(1:3)
-Hm.sops.sct <- FindClusters(Hm.sops.sct, resolution =1)
-#Hm.sops.sct <- NormalizeData(Hm.sops.sct, normalization.method = "LogNormalize", assay = 'RNA')
-```
-
+See [run commands and input formats](../scripts/README.md), [cleanup notes](../docs/CLEANUP_NOTES.md) and the [original source archive](../archive/README.md).
 
 [Return to analysis index](../README.md#analysis-index).

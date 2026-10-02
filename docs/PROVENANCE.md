@@ -13,3 +13,7 @@ No analysis has been rerun and no public archive release has been created. The c
 Received `iv_v_wt_timeseries_March2025/rscript.regressingTime.R` as an inline paste and `Iv_v_Wt_comp/wt_vs_ivory_scales.r` as an attached terminal transcript. The latter attachment is retained byte-for-byte; only its first listing and cat prompt are removed in the extracted .r. Internal console prompts, printed results and exploratory branches remain unchanged.
 
 The March source is transcribed with no logic changes. Both new scientific sources were inspected statically; no analysis was run. The file requests now distinguish a recovered integration/save tail from missing upstream setup.
+
+## Cleaned working scripts — 2026-10-02
+
+The main entry points are now [scripts/README.md](../scripts/README.md). Coherent import/QC/SCT, integration, scoring, classification, DE and plot steps have been extracted and annotated, with explicit arguments and documented reconstruction choices. Original snapshots remain unchanged. Remaining requests concern inputs, final branch selection, missing analysis branches and result matching—not a request to send a pre-cleaned version of every existing script. See [CLEANUP_NOTES.md](CLEANUP_NOTES.md).

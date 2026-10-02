@@ -167,3 +167,7 @@ Add a root for the RNAhybrid and Nanopore work if those are elsewhere. `he_ts` r
 | R13 Environments | Reported versions recovered | Actual session/package/tool records and environments |
 | R14 Validation | Static source inspection only | Successful logs and expected outputs; no scientific rerun performed |
 | R15 Data/release | BioProjects PRJNA1404329 and PRJNA1118807 provided | Run-level mappings, processed-input locations, code license/release archive DOI |
+
+## Cleaned working scripts — 2026-10-02
+
+The main entry points are now [scripts/README.md](../scripts/README.md). Coherent import/QC/SCT, integration, scoring, classification, DE and plot steps have been extracted and annotated, with explicit arguments and documented reconstruction choices. Original snapshots remain unchanged. Remaining requests concern inputs, final branch selection, missing analysis branches and result matching—not a request to send a pre-cleaned version of every existing script. See [CLEANUP_NOTES.md](CLEANUP_NOTES.md).

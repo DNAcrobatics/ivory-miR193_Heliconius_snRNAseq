@@ -1,21 +1,11 @@
 # Code guide
 
-The reader-facing workflows are the numbered Markdown documents in [analyses/](analyses/), linked from the [analysis index](README.md#analysis-index). Their Inputs, Outputs, Software, Execution and interpretation, and Code sections follow a consistent format.
+The main working code is in [scripts/](scripts/README.md): cleaned and annotated Bash/R entry points with input checks, explicit parameters, output tables and vector PDFs. [CLEANUP_NOTES.md](docs/CLEANUP_NOTES.md) records repairs, adaptations, tests and limits. The [paper analysis index](README.md#analysis-index) links the annotated workflow descriptions.
 
-## Source treatment
+Original scripts are preserved under `archive/original/`; received text attachments are under `archive/received/`. Their hashes and transcription/extraction steps are recorded in [received_source_manifest.tsv](metadata/received_source_manifest.tsv). These originals are evidence for the cleaned versions and are not the recommended entry points.
 
-Original scientific scripts are kept under `archive/original/`; received text attachments are under `archive/received/`. Their provenance and transformations are recorded in [received_source_manifest.tsv](metadata/received_source_manifest.tsv). Workflow code fences reproduce complete supplied files or exact line excerpts. No missing parentheses, thresholds, object names or session setup have been guessed or silently repaired.
+The cleaned scripts separate coherent steps from interactive session histories. Numerical choices, assay choices, sample metadata and contrast membership are explicit. Historical reconstruction examples are labelled; an incomplete exploratory branch is not presented as final science. Once final inputs and parameter choices arrive, the remaining work is to run and compare the scripts with published outputs.
 
-The long R paste is a session history with exploratory branches and prose, not a runnable final script. Its excerpts are labelled accordingly. Once final branches and inputs are confirmed, portable scripts can be added alongside these annotated documents, with every adaptation recorded.
+RDS is the default object format; H5Seurat inputs and optional integration export are supported. Scripts emit settings and sessionInfo; use [envs/README.md](envs/README.md) to supply the actual environment. Working-directory paths are documented in the run guide. The example TOML is a planning aid, not a hidden dependency.
 
-## Working directories and dependencies
-
-Historical scripts read relative paths and assume objects or variables from earlier sessions. Read each workflow before copying a block into R or Bash. Record the intended working directory, input checksums, sample ordering, active assay, package versions and random seeds when recovering a run. The example path configuration is a planning aid; original scripts do not consume it.
-
-Use [envs/README.md](envs/README.md) to supply actual environment exports. Guessed lockfiles should not replace executed environment records.
-
-## Collection and review
-
-See [FILE_REQUESTS.md](docs/FILE_REQUESTS.md) for the full intake checklist and the collection helper usage. [INTAKE_REVIEW.md](docs/INTAKE_REVIEW.md) documents unresolved thresholds, metadata, statistics, annotation and enrichment choices. [FIGURE_MAP.md](docs/FIGURE_MAP.md) connects received source to paper panels.
-
-The earlier `analysis/` planning folders now point to the numbered workflows. They are retained to preserve existing links; `analyses/` is the main entry point.
+Use [FILE_REQUESTS.md](docs/FILE_REQUESTS.md) for missing inputs and [INTAKE_REVIEW.md](docs/INTAKE_REVIEW.md) for final scientific choices still to resolve. The earlier `analysis/` planning folders redirect to `analyses/` to preserve existing links.

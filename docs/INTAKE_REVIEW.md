@@ -44,3 +44,7 @@ The March source contains the active integration-and-save tail for the `Hm_combi
 The commented full merge lists 17 samples and excludes Hmr_5i. Its historical mutant times are 32/35/56/46/36, not confirmed final metadata. The active race assignment labels three Hmm samples mal, five iv samples iv and all others ros. Confirm the actual sample inventory rather than treating the commented merge as the executed cohort.
 
 The May 2023 scales source uses nine matrices, min.cells=30/min.features=1000, per-sample SCT with glmGamPoi and nCount_RNA regression, 3,000 integration features, ten PCs and resolution 0.5 in its first branch, and later cell-cycle trials. PrepSCTIntegration references object.list rather than the constructed wing.list, and the file contains internal R prompts and printed results. It is historical session source, not a complete final script; its apparent parameter overlap with the manuscript does not prove final use.
+
+## Cleaned working scripts — 2026-10-02
+
+The main entry points are now [scripts/README.md](../scripts/README.md). Coherent import/QC/SCT, integration, scoring, classification, DE and plot steps have been extracted and annotated, with explicit arguments and documented reconstruction choices. Original snapshots remain unchanged. Remaining requests concern inputs, final branch selection, missing analysis branches and result matching—not a request to send a pre-cleaned version of every existing script. See [CLEANUP_NOTES.md](CLEANUP_NOTES.md).

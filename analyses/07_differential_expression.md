@@ -2,7 +2,7 @@
 
 **Paper:** Figure 6D–G and Figure 7A/B/D/E.
 
-**Status:** Session fragments; final tests unresolved.
+**Status:** cleaned scripts supplied; final inputs/settings and result matching pending.
 
 Recover four main contrasts and their volcano/dot-plot source tables.
 
@@ -26,53 +26,14 @@ The recovered main calls use Seurat FindMarkers on nucleus subsets and omit test
 
 See [intake review](../docs/INTAKE_REVIEW.md) for unresolved decisions and [file requests](../docs/FILE_REQUESTS.md) for the complete acquisition checklist.
 
-## Code
+## Cleaned code and execution
 
-### Early WT versus mutant call
+- [05_find_markers.R](../scripts/snrna/05_find_markers.R)
+- [volcano.R](../scripts/plots/volcano.R)
+- [dotplot.R](../scripts/plots/dotplot.R)
 
-**Source:** [ivory_reanalysis.expanded.pasted.r, lines 1044–1045](../archive/original/ivory_proj_transfer_aug2025/ivory_reanalysis.expanded.pasted.r#L1044-L1045).
+Use frozen membership tables for all four comparisons, with explicit group direction and assay. Wilcoxon is explicit in this cleaned nucleus-level branch; the pseudobulk wording discrepancy still needs resolution. These plots are clean equivalents awaiting final labels/palette/output matching.
 
-**Archive treatment:** exact excerpt; no syntax repairs, parameter changes, or inferred session setup. This is a recovered session fragment, not a standalone script.
-
-```r
-Idents(test) <- test$mut
-WtVMutInHi.Markers2 <- FindMarkers(subset(test,Iv =='hi'), ident.1='wt',recorrect_umi=FALSE)
-```
-
-### Early ivory-high versus low
-
-**Source:** [ivory_reanalysis.expanded.pasted.r, lines 1124–1126](../archive/original/ivory_proj_transfer_aug2025/ivory_reanalysis.expanded.pasted.r#L1124-L1126).
-
-**Archive treatment:** exact excerpt; no syntax repairs, parameter changes, or inferred session setup. This is a recovered session fragment, not a standalone script.
-
-```r
-Idents(test) <- test$Iv
-DefaultAssay(test) <- "RNA"
-HiVsLo.markers <- FindMarkers(test, ident.1="hi", ident.2="lo",recorrect_umi=FALSE)
-```
-
-### Late WT versus mutant call
-
-**Source:** [ivory_reanalysis.expanded.pasted.r, lines 1415–1416](../archive/original/ivory_proj_transfer_aug2025/ivory_reanalysis.expanded.pasted.r#L1415-L1416).
-
-**Archive treatment:** exact excerpt; no syntax repairs, parameter changes, or inferred session setup. This is a recovered session fragment, not a standalone script.
-
-```r
-Idents(test1) <- test1$mut
-WtVMutInHiLate.Markers <- FindMarkers(subset(test1,Iv=='hi'), ident.1='wt',recorrect_umi=FALSE)
-```
-
-### Late ivory-high versus low
-
-**Source:** [ivory_reanalysis.expanded.pasted.r, lines 1510–1512](../archive/original/ivory_proj_transfer_aug2025/ivory_reanalysis.expanded.pasted.r#L1510-L1512).
-
-**Archive treatment:** exact excerpt; no syntax repairs, parameter changes, or inferred session setup. This is a recovered session fragment, not a standalone script.
-
-```r
-Idents(test1) <- test1$Iv
-DefaultAssay(test1) <- "RNA"
-HiVsLoLate.markers <- FindMarkers(test1, ident.1="hi", ident.2="lo",recorrect_umi=FALSE)
-```
-
+See [run commands and input formats](../scripts/README.md), [cleanup notes](../docs/CLEANUP_NOTES.md) and the [original source archive](../archive/README.md).
 
 [Return to analysis index](../README.md#analysis-index).

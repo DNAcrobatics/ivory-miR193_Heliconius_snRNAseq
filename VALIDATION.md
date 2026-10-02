@@ -9,7 +9,7 @@
 
 ## Limits
 
-No scientific analysis has been rerun. The full dataset, final object builder, environment records and final plot/source tables are incomplete. R was unavailable in the intake workspace. The long R session paste includes syntax errors and exploratory branches, so it is not claimed to pass parsing or execution.
+No scientific analysis has been rerun. The full dataset, final object builder, environment records and final plot/source tables are incomplete. R was unavailable in the intake workspace. The long R session paste includes syntax errors and exploratory branches, so it is not claimed to pass parsing or execution. The cleaned R scripts now separate those steps but still need R/package execution checks in the actual environment. Shell orchestration checks with mock tools passed; see [cleanup notes](docs/CLEANUP_NOTES.md).
 
 ## Required release validation
 
