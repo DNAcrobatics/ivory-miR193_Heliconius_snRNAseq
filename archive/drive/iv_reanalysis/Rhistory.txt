@@ -1,0 +1,512 @@
+e <- DimPlot(Hm.sops.sct,group.by='time',shuffle=T)
+f <- DimPlot(Hm.sops.sct, group.by='seurat_clusters',shuffle=T,label=T)
+a+b+c+d+e+f
+Hm.sops.sct <- RunUMAP(Hm.sops.sct,dims = c(1:6))
+Hm.sops.sct <- FindNeighbors(Hm.sops.sct, dims =  c(1:6))
+Hm.sops.sct <- FindClusters(Hm.sops.sct, resolution =1)
+#Hm.sops.sct <- NormalizeData(Hm.sops.sct, normalization.method = "LogNormalize", assay = 'RNA')
+DefaultAssay(Hm.sops.sct) <- 'RNA'
+a <- DimPlot(Hm.sops.sct,group.by='celltypes',label=T,repel=T)
+b <- DimPlot(Hm.sops.sct,group.by='race',order=T)
+c <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel218003oG779',min.cutoff=0,order=T) # sv
+d <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel212001oG165',min.cutoff=0,order=T) # sox15
+e <- DimPlot(Hm.sops.sct,group.by='time',shuffle=T)
+f <- DimPlot(Hm.sops.sct, group.by='seurat_clusters',shuffle=T,label=T)
+a+b+c+d+e+f
+Hm.sops.sct <- RunUMAP(Hm.sops.sct,dims = c(2:6))
+Hm.sops.sct <- FindNeighbors(Hm.sops.sct, dims =  c(2:6))
+Hm.sops.sct <- FindClusters(Hm.sops.sct, resolution =1)
+#Hm.sops.sct <- NormalizeData(Hm.sops.sct, normalization.method = "LogNormalize", assay = 'RNA')
+DefaultAssay(Hm.sops.sct) <- 'RNA'
+a <- DimPlot(Hm.sops.sct,group.by='celltypes',label=T,repel=T)
+b <- DimPlot(Hm.sops.sct,group.by='race',order=T)
+c <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel218003oG779',min.cutoff=0,order=T) # sv
+d <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel212001oG165',min.cutoff=0,order=T) # sox15
+e <- DimPlot(Hm.sops.sct,group.by='time',shuffle=T)
+f <- DimPlot(Hm.sops.sct, group.by='seurat_clusters',shuffle=T,label=T)
+a+b+c+d+e+f
+Hm.sops.sct <- RunUMAP(Hm.sops.sct,dims = c(2:5))
+Hm.sops.sct <- FindNeighbors(Hm.sops.sct, dims =  c(2:5))
+Hm.sops.sct <- FindClusters(Hm.sops.sct, resolution =1)
+#Hm.sops.sct <- NormalizeData(Hm.sops.sct, normalization.method = "LogNormalize", assay = 'RNA')
+DefaultAssay(Hm.sops.sct) <- 'RNA'
+a <- DimPlot(Hm.sops.sct,group.by='celltypes',label=T,repel=T)
+b <- DimPlot(Hm.sops.sct,group.by='race',order=T)
+c <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel218003oG779',min.cutoff=0,order=T) # sv
+d <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel212001oG165',min.cutoff=0,order=T) # sox15
+e <- DimPlot(Hm.sops.sct,group.by='time',shuffle=T)
+f <- DimPlot(Hm.sops.sct, group.by='seurat_clusters',shuffle=T,label=T)
+a+b+c+d+e+f
+Hm.sops.sct <- RunUMAP(Hm.sops.sct,dims = c(2:4,6))
+Hm.sops.sct <- FindNeighbors(Hm.sops.sct, dims =  c(2:4,6))
+Hm.sops.sct <- FindClusters(Hm.sops.sct, resolution =1)
+#Hm.sops.sct <- NormalizeData(Hm.sops.sct, normalization.method = "LogNormalize", assay = 'RNA')
+DefaultAssay(Hm.sops.sct) <- 'RNA'
+a <- DimPlot(Hm.sops.sct,group.by='celltypes',label=T,repel=T)
+b <- DimPlot(Hm.sops.sct,group.by='race',order=T)
+c <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel218003oG779',min.cutoff=0,order=T) # sv
+d <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel212001oG165',min.cutoff=0,order=T) # sox15
+e <- DimPlot(Hm.sops.sct,group.by='time',shuffle=T)
+f <- DimPlot(Hm.sops.sct, group.by='seurat_clusters',shuffle=T,label=T)
+a+b+c+d+e+f
+Hm.sops.sct <- RunUMAP(Hm.sops.sct,dims = c(2,3,5,6))
+Hm.sops.sct <- FindNeighbors(Hm.sops.sct, dims =  c(2,3,5,6))
+Hm.sops.sct <- FindClusters(Hm.sops.sct, resolution =1)
+#Hm.sops.sct <- NormalizeData(Hm.sops.sct, normalization.method = "LogNormalize", assay = 'RNA')
+DefaultAssay(Hm.sops.sct) <- 'RNA'
+a <- DimPlot(Hm.sops.sct,group.by='celltypes',label=T,repel=T)
+b <- DimPlot(Hm.sops.sct,group.by='race',order=T)
+c <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel218003oG779',min.cutoff=0,order=T) # sv
+d <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel212001oG165',min.cutoff=0,order=T) # sox15
+e <- DimPlot(Hm.sops.sct,group.by='time',shuffle=T)
+f <- DimPlot(Hm.sops.sct, group.by='seurat_clusters',shuffle=T,label=T)
+a+b+c+d+e+f
+Hm.sops.sct <- RunUMAP(Hm.sops.sct,dims = c(2,4,5,6))
+Hm.sops.sct <- FindNeighbors(Hm.sops.sct, dims =  c(2,4,5,6))
+Hm.sops.sct <- FindClusters(Hm.sops.sct, resolution =1)
+#Hm.sops.sct <- NormalizeData(Hm.sops.sct, normalization.method = "LogNormalize", assay = 'RNA')
+DefaultAssay(Hm.sops.sct) <- 'RNA'
+a <- DimPlot(Hm.sops.sct,group.by='celltypes',label=T,repel=T)
+b <- DimPlot(Hm.sops.sct,group.by='race',order=T)
+c <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel218003oG779',min.cutoff=0,order=T) # sv
+d <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel212001oG165',min.cutoff=0,order=T) # sox15
+e <- DimPlot(Hm.sops.sct,group.by='time',shuffle=T)
+f <- DimPlot(Hm.sops.sct, group.by='seurat_clusters',shuffle=T,label=T)
+a+b+c+d+e+f
+Hm.sops.sct <- RunUMAP(Hm.sops.sct,dims = c(1,3,4,5,6))
+Hm.sops.sct <- FindNeighbors(Hm.sops.sct, dims =  c(1,3,4,5,6))
+Hm.sops.sct <- FindClusters(Hm.sops.sct, resolution =1)
+#Hm.sops.sct <- NormalizeData(Hm.sops.sct, normalization.method = "LogNormalize", assay = 'RNA')
+DefaultAssay(Hm.sops.sct) <- 'RNA'
+a <- DimPlot(Hm.sops.sct,group.by='celltypes',label=T,repel=T)
+b <- DimPlot(Hm.sops.sct,group.by='race',order=T)
+c <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel218003oG779',min.cutoff=0,order=T) # sv
+d <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel212001oG165',min.cutoff=0,order=T) # sox15
+e <- DimPlot(Hm.sops.sct,group.by='time',shuffle=T)
+f <- DimPlot(Hm.sops.sct, group.by='seurat_clusters',shuffle=T,label=T)
+a+b+c+d+e+f
+Hm.sops.sct <- RunUMAP(Hm.sops.sct,dims = c(1,2,3,4,5,6))
+Hm.sops.sct <- FindNeighbors(Hm.sops.sct, dims =  c(1,2,3,4,5,6))
+Hm.sops.sct <- FindClusters(Hm.sops.sct, resolution =1)
+#Hm.sops.sct <- NormalizeData(Hm.sops.sct, normalization.method = "LogNormalize", assay = 'RNA')
+DefaultAssay(Hm.sops.sct) <- 'RNA'
+a <- DimPlot(Hm.sops.sct,group.by='celltypes',label=T,repel=T)
+b <- DimPlot(Hm.sops.sct,group.by='race',order=T)
+c <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel218003oG779',min.cutoff=0,order=T) # sv
+d <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel212001oG165',min.cutoff=0,order=T) # sox15
+e <- DimPlot(Hm.sops.sct,group.by='time',shuffle=T)
+f <- DimPlot(Hm.sops.sct, group.by='seurat_clusters',shuffle=T,label=T)
+a+b+c+d+e+f
+Hm.sops.sct <- RunUMAP(Hm.sops.sct,dims = c(1,3,4,5,6))
+Hm.sops.sct <- FindNeighbors(Hm.sops.sct, dims =  c(1,3,4,5,6))
+Hm.sops.sct <- FindClusters(Hm.sops.sct, resolution =1)
+#Hm.sops.sct <- NormalizeData(Hm.sops.sct, normalization.method = "LogNormalize", assay = 'RNA')
+DefaultAssay(Hm.sops.sct) <- 'RNA'
+a <- DimPlot(Hm.sops.sct,group.by='celltypes',label=T,repel=T)
+b <- DimPlot(Hm.sops.sct,group.by='race',order=T)
+c <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel218003oG779',min.cutoff=0,order=T) # sv
+d <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel212001oG165',min.cutoff=0,order=T) # sox15
+e <- DimPlot(Hm.sops.sct,group.by='time',shuffle=T)
+f <- DimPlot(Hm.sops.sct, group.by='seurat_clusters',shuffle=T,label=T)
+a+b+c+d+e+f
+Hm.sops.sct <- RunUMAP(Hm.sops.sct,dims = c(2,3,4,5,6))
+Hm.sops.sct <- FindNeighbors(Hm.sops.sct, dims =  c(2,3,4,5,6))
+Hm.sops.sct <- FindClusters(Hm.sops.sct, resolution =1)
+#Hm.sops.sct <- NormalizeData(Hm.sops.sct, normalization.method = "LogNormalize", assay = 'RNA')
+DefaultAssay(Hm.sops.sct) <- 'RNA'
+a <- DimPlot(Hm.sops.sct,group.by='celltypes',label=T,repel=T)
+b <- DimPlot(Hm.sops.sct,group.by='race',order=T)
+c <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel218003oG779',min.cutoff=0,order=T) # sv
+d <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel212001oG165',min.cutoff=0,order=T) # sox15
+e <- DimPlot(Hm.sops.sct,group.by='time',shuffle=T)
+f <- DimPlot(Hm.sops.sct, group.by='seurat_clusters',shuffle=T,label=T)
+a+b+c+d+e+f
+Hm.sops.sct <- RunUMAP(Hm.sops.sct,dims = c(3,4,5,6))
+Hm.sops.sct <- FindNeighbors(Hm.sops.sct, dims =  c(3,4,5,6))
+Hm.sops.sct <- FindClusters(Hm.sops.sct, resolution =1)
+#Hm.sops.sct <- NormalizeData(Hm.sops.sct, normalization.method = "LogNormalize", assay = 'RNA')
+DefaultAssay(Hm.sops.sct) <- 'RNA'
+a <- DimPlot(Hm.sops.sct,group.by='celltypes',label=T,repel=T)
+b <- DimPlot(Hm.sops.sct,group.by='race',order=T)
+c <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel218003oG779',min.cutoff=0,order=T) # sv
+d <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel212001oG165',min.cutoff=0,order=T) # sox15
+e <- DimPlot(Hm.sops.sct,group.by='time',shuffle=T)
+f <- DimPlot(Hm.sops.sct, group.by='seurat_clusters',shuffle=T,label=T)
+a+b+c+d+e+f
+Hm.sops.sct <- RunUMAP(Hm.sops.sct,dims = c(3,4,5,6,7))
+Hm.sops.sct <- FindNeighbors(Hm.sops.sct, dims =  c(3,4,5,6,7))
+Hm.sops.sct <- FindClusters(Hm.sops.sct, resolution =1)
+#Hm.sops.sct <- NormalizeData(Hm.sops.sct, normalization.method = "LogNormalize", assay = 'RNA')
+DefaultAssay(Hm.sops.sct) <- 'RNA'
+a <- DimPlot(Hm.sops.sct,group.by='celltypes',label=T,repel=T)
+b <- DimPlot(Hm.sops.sct,group.by='race',order=T)
+c <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel218003oG779',min.cutoff=0,order=T) # sv
+d <- FeaturePlot(Hm.sops.sct,'Hmel.Hmel212001oG165',min.cutoff=0,order=T) # sox15
+e <- DimPlot(Hm.sops.sct,group.by='time',shuffle=T)
+f <- DimPlot(Hm.sops.sct, group.by='seurat_clusters',shuffle=T,label=T)
+a+b+c+d+e+f
+?IntegrateData
+Hm_sops <- SCTransform(Hm_sops, verbose = T, variable.features.n = 5000,vars.to.regress='time')
+Hm_sops <- RunPCA(Hm_sops,  npcs = 50, verbose = T)
+Hm_sops <- RunUMAP(Hm_sops,  dims = 1:5)
+Hm_sops <- FindNeighbors(Hm_sops, dims = 1:5)
+Hm_sops <- FindClusters(Hm_sops, resolution = 2)
+library(sctransform)
+install.packages('sctransform')
+library(seurat)
+library(Seurat)
+Hm_sops <- SCTransform(Hm_sops, verbose = T, variable.features.n = 5000,vars.to.regress='time')
+remove.packages("sctransform")
+unlink("/Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/library/sctransform", recursive = TRUE)
+install.packages("sctransform")
+remotes::install_version("sctransform", version = "0.4.0")  # adjust as needed
+q()
+library(Seurat)
+library(ggplot2)
+library(SeuratDisk)
+library(sctransform)
+library(SeuratObject)
+UpGenePANGEA <- read.csv('UpGenesLate_DirectGoEnrichment_PANGEA.csv',h=T)
+head(UpGenePANGEA)
+UpGenePANGEA<- (subset(UpGenePANGEA, Benjamini...Yekutieli < 0.05))
+nrow(UpGenePANGEA)
+DownGenePANGEA <- read.csv('DownGenes_DirectGoEnrichment_PANGEA.csv',h=T)
+DownGenePANGEA<- (subset(DownGenePANGEA, Benjamini...Hochberg < 0.05))
+head(DownGenePANGEA)
+nrow(DownGenePANGE)
+nrow)DownGenePANGEA)
+nrow(DownGenePANGEA)
+bA <- ggplot(DownGenePANGEA, aes(x = Count.Overlap.Gene, y = reorder(Gene.Set.Name, Fold.Enrichment), 
+               size = Fold.Enrichment, color = Benjamini...Hochberg)) +
+  geom_point() +
+#  facet_grid(Cluster~., scales = "free_y", space = "free_y") +
+  theme_bw(base_size = 12) +
+  labs(title = "GO Enrichment by Cluster",
+       x = "Count",
+       y = "DirectGO Term",
+       color = "Adjusted p-value",
+       size = "Fold Enrichment") +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    strip.text = element_text(face = "bold")
+  )+
+  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40))
+bA
+DownGenePANGEA <- read.csv('DownGenesLate_DirectGoEnrichment_PANGEA.csv',h=T)
+DownGenePANGEA<- (subset(DownGenePANGEA, Benjamini...Hochberg < 0.05))
+bA <- ggplot(DownGenePANGEA, aes(x = Count.Overlap.Gene, y = reorder(Gene.Set.Name, Fold.Enrichment), 
+               size = Fold.Enrichment, color = Benjamini...Hochberg)) +
+  geom_point() +
+#  facet_grid(Cluster~., scales = "free_y", space = "free_y") +
+  theme_bw(base_size = 12) +
+  labs(title = "GO Enrichment by Cluster",
+       x = "Count",
+       y = "DirectGO Term",
+       color = "Adjusted p-value",
+       size = "Fold Enrichment") +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    strip.text = element_text(face = "bold")
+  )+
+  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40))
+bA
+head(DownGenePANGEA)
+DownGenePANGEA <- read.csv('DownGenesLate_DirectGoEnrichment_PANGEA.csv',h=T)
+DownGenePANGEA<- (subset(DownGenePANGEA, Bonferroni < 0.05))
+nrow(DownGenePANGEA)
+bA <- ggplot(DownGenePANGEA, aes(x = Count.Overlap.Gene, y = reorder(Gene.Set.Name, Fold.Enrichment), 
+               size = Fold.Enrichment, color = Benjamini...Hochberg)) +
+  geom_point() +
+#  facet_grid(Cluster~., scales = "free_y", space = "free_y") +
+  theme_bw(base_size = 12) +
+  labs(title = "GO Enrichment by Cluster",
+       x = "Count",
+       y = "DirectGO Term",
+       color = "Adjusted p-value",
+       size = "Fold Enrichment") +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    strip.text = element_text(face = "bold")
+  )+
+  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40))
+bA
+DownGenePANGEA <- read.csv('DownGenesLate_DirectGoEnrichment_PANGEA2.csv',h=T)
+DownGenePANGEA<- (subset(DownGenePANGEA, Bonferroni < 0.05))
+bA <- ggplot(DownGenePANGEA, aes(x = Count.Overlap.Gene, y = reorder(Gene.Set.Name, Fold.Enrichment), 
+               size = Fold.Enrichment, color = Benjamini...Hochberg)) +
+  geom_point() +
+#  facet_grid(Cluster~., scales = "free_y", space = "free_y") +
+  theme_bw(base_size = 12) +
+  labs(title = "GO Enrichment by Cluster",
+       x = "Count",
+       y = "DirectGO Term",
+       color = "Adjusted p-value",
+       size = "Fold Enrichment") +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    strip.text = element_text(face = "bold")
+  )+
+  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40))
+DownGenePANGEA <- read.csv('DownGenesLate_DirectGoEnrichment_PANGEA_2.csv',h=T)
+DownGenePANGEA<- (subset(DownGenePANGEA, Benjamini...Yekutieli < 0.05))
+nrow9DownGenePANGEA)
+nrow(DownGenePANGEA)
+bA <- ggplot(DownGenePANGEA, aes(x = Count.Overlap.Gene, y = reorder(Gene.Set.Name, Fold.Enrichment), 
+               size = Fold.Enrichment, color = Benjamini...Hochberg)) +
+  geom_point() +
+#  facet_grid(Cluster~., scales = "free_y", space = "free_y") +
+  theme_bw(base_size = 12) +
+  labs(title = "GO Enrichment by Cluster",
+       x = "Count",
+       y = "DirectGO Term",
+       color = "Adjusted p-value",
+       size = "Fold Enrichment") +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    strip.text = element_text(face = "bold")
+  )+
+  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40))
+b3
+b4
+a4
+bA
+UpGenePANGEA <- read.csv('UpGenesLate_DirectGoEnrichment_PANGEA_2.csv',h=T)
+UpGenePANGEA<- (subset(UpGenePANGEA, Benjamini...Yekutieli < 0.05))
+aA <- ggplot(UpGenePANGEA, aes(x = Count.Overlap.Gene, y = reorder(Gene.Set.Name, Fold.Enrichment), 
+               size = Fold.Enrichment, color = Benjamini...Yekutieli)) +
+  geom_point() +
+#  facet_grid(Cluster~., scales = "free_y", space = "free_y") +
+  theme_bw(base_size = 12) +
+  labs(title = "GO Enrichment by Cluster",
+       x = "Count",
+       y = "DirectGO Term",
+       color = "Adjusted p-value",
+       size = "Fold Enrichment") +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    strip.text = element_text(face = "bold")
+  )+
+  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40))
+aA
+aA+bA
+plot_grid(aA,bA,ncol=1)
+library(cowplot)
+plot_grid(aA,bA,ncol=1)
+length(HiVsLoLate.markers[HiVsLoLate.markers$avg_log2FC > 0 & HiVsLoLate.markers$p_val_adj > 50,1])
+Idents(test1) <- test1$Iv
+DefaultAssay(test1) <- "RNA"
+HiVsLoLate.markers <- FindMarkers(test1, ident.1="hi", ident.2="lo",recorrect_umi=FALSE)
+HiVsLoLate.markers <- HiVsLoLate.markers[order(HiVsLoLate.markers$avg_log2FC, decreasing = TRUE), ]
+HiVsLoLate.markers$genes <- row.names(HiVsLoLate.markers)
+tab <- read.table('HiVsLoLate.markers_naems.txt',h=T)
+tab <- tab[order(match(tab$genes,HiVsLoLate.markers$genes )), ]
+b3 <- DotPlot(test1,features=tab$genes,scale=FALSE,group.by='Iv')+coord_flip()+ theme(axis.text.x = element_text(angle = 30, hjust=1))+scale_color_batlow(reverse=T)+scale_x_discrete(labels=tab$names)
+HiVsLoLate.markers$genes <- row.names(HiVsLoLate.markers)
+HiVsLoLate.markers <- merge(HiVsLoLate.markers,tab,by='genes',all.x=TRUE)
+HiVsLoLate.markers <- HiVsLoLate.markers[order(HiVsLoLate.markers$p_val_adj), ]
+HiVsLoLate.markers$highlight <- ifelse(HiVsLoLate.markers$genes %in% chr15list, "chr15",
+                                       ifelse(HiVsLoLate.markers$names!='NA',"sig","no"))
+test1 <- subset(Hm.sops.sct, orig.ident %in% c('iv_55','Hmm_40','Hmr_40') & celltypes=='scale')
+DefaultAssay(test1) <- 'RNA'
+barcodes <- subset(x = test1, Ivory > 1 & race=='iv')
+barcodes2<- subset(x = test1, Ivory > 4 & race!='iv')
+test1$Iv <- ""
+test1$Iv[WhichCells(test1) %in%  WhichCells(barcodes)] <- "hi"
+test1$Iv[WhichCells(test1) %in%  WhichCells(barcodes2)] <- 'hi'
+test1$Iv[test1$Iv == ''] <- 'lo'
+#test$Iv[WhichCells(test) %ni%  WhichCells(barcodes)] <- "lo"
+#test$Iv[WhichCells(test) %ni%  WhichCells(barcodes2)] <- 'lo'
+Idents(test1) <- test1$Iv
+VlnPlot(test1,'Ivory',split.by='race')
+WtVMutInHiLate.Markers <- FindMarkers(subset(test1,Iv=='hi'), ident.1='wt',recorrect_umi=FALSE)
+tab <- read.table('WtVMutInHiLate.Markers_genenames.txt',h=T)
+WtVMutInHiLate.Markers$genes <- row.names(WtVMutInHiLate.Markers)
+WtVMutInHiLate.Markers <- merge(WtVMutInHiLate.Markers,tab,by='genes',all.x=TRUE)
+WtVMutInHiLate.Markers <- WtVMutInHiLate.Markers[order(WtVMutInHiLate.Markers$p_val_adj), ]
+WtVMutInHiLate.Markers$highlight <- ifelse(WtVMutInHiLate.Markers$genes %in% chr15list, "chr15",
+                                       ifelse(WtVMutInHiLate.Markers$names!='NA',"sig","no"))
+#order by pct.d
+#WtVMutInHiLate.Markers <- WtVMutInHiLate.Markers[order(WtVMutInHiLate.Markers$pct.1 - WtVMutInHiLate.Markers$pct.2, decreasing = TRUE), ]
+WtVMutInHiLate.Markers <- WtVMutInHiLate.Markers[order(WtVMutInHiLate.Markers$avg_log2FC, decreasing = TRUE), ]
+#tab <- tab[match(WtVMutInHi.Markers$genes[-log10(WtVMutInHi.Markers$p_val_adj) >150 & abs(WtVMutInHi.Markers$avg_log2FC) >1 & abs(WtVMutInHi.Markers$pct.1 - WtVMutInHi.Markers$pct.2) >0.3], tab$genes), ] |> na.omit()
+#tab1 <- tab[match(WtVMutInHi.Markers$genes[-log10(WtVMutInHi.Markers$p_val_adj) >150 & abs(WtVMutInHi.Markers$avg_log2FC) >2 & abs(WtVMutInHi.Markers$pct.1 - WtVMutInHi.Markers$pct.2) >0.3], tab$genes), ] |> na.omit()
+tab <- tab[order(match(tab$genes,WtVMutInHiLate.Markers$genes )), ]
+tmp <- WtVMutInHiLate.Markers[abs(WtVMutInHiLate.Markers$pct.1 - WtVMutInHiLate.Markers$pct.2) > 0.5,]
+tab1 <- subset(tab, tab$genes %in% tmp$genes)
+Idents(test1) <- test1$mut
+WtVMutInHiLate.Markers <- FindMarkers(subset(test1,Iv=='hi'), ident.1='wt',recorrect_umi=FALSE)
+tab <- read.table('WtVMutInHiLate.Markers_genenames.txt',h=T)
+WtVMutInHiLate.Markers$genes <- row.names(WtVMutInHiLate.Markers)
+WtVMutInHiLate.Markers <- merge(WtVMutInHiLate.Markers,tab,by='genes',all.x=TRUE)
+WtVMutInHiLate.Markers <- WtVMutInHiLate.Markers[order(WtVMutInHiLate.Markers$p_val_adj), ]
+WtVMutInHiLate.Markers$highlight <- ifelse(WtVMutInHiLate.Markers$genes %in% chr15list, "chr15",
+                                       ifelse(WtVMutInHiLate.Markers$names!='NA',"sig","no"))
+#order by pct.d
+WtVMutInHiLate.Markers <- WtVMutInHiLate.Markers[order(WtVMutInHiLate.Markers$avg_log2FC, decreasing = TRUE), ]
+#tab <- tab[match(WtVMutInHi.Markers$genes[-log10(WtVMutInHi.Markers$p_val_adj) >150 & abs(WtVMutInHi.Markers$avg_log2FC) >1 & abs(WtVMutInHi.Markers$pct.1 - WtVMutInHi.Markers$pct.2) >0.3], tab$genes), ] |> na.omit()
+#tab1 <- tab[match(WtVMutInHi.Markers$genes[-log10(WtVMutInHi.Markers$p_val_adj) >150 & abs(WtVMutInHi.Markers$avg_log2FC) >2 & abs(WtVMutInHi.Markers$pct.1 - WtVMutInHi.Markers$pct.2) >0.3], tab$genes), ] |> na.omit()
+tab <- tab[order(match(tab$genes,WtVMutInHiLate.Markers$genes )), ]
+tmp <- WtVMutInHiLate.Markers[abs(WtVMutInHiLate.Markers$pct.1 - WtVMutInHiLate.Markers$pct.2) > 0.5,]
+tab1 <- subset(tab, tab$genes %in% tmp$genes)
+a3 <- DotPlot(test1,tab1$genes,scale=F)+coord_flip()+ theme(axis.text.x = element_text(angle = 30, hjust=1))+scale_color_batlow(reverse=T)+scale_x_discrete(labels=tab$names)
+a4 <- ggplot(WtVMutInHiLate.Markers, aes(avg_log2FC, -log10(p_val_adj),col=highlight))+
+    geom_point(alpha=0.7,size=1)+
+    scale_colour_manual(values=c(okabe5[1],okabe5[2],'black','white'))+
+    scale_fill_manual(values=c(okabe5[1],okabe5[2],'black','white'))+
+ #   geom_text_repel(size=3,alpha=1,colour='black',segment.size=0.1,data = subset(WtVMutInHi.Markers, genes %in% list), aes(label=names,fill=highlight),max.overlaps=Inf,force=3,force_pull=0.5,ylim=c(5,Inf),direction='both')+    
+    theme_classic()+theme(legend.position='none')+coord_flip()
+library(khroma)
+WtVMutInHiLate.Markers <- WtVMutInHiLate.Markers[order(WtVMutInHiLate.Markers$avg_log2FC, decreasing = TRUE), ]
+#tab <- tab[match(WtVMutInHi.Markers$genes[-log10(WtVMutInHi.Markers$p_val_adj) >150 & abs(WtVMutInHi.Markers$avg_log2FC) >1 & abs(WtVMutInHi.Markers$pct.1 - WtVMutInHi.Markers$pct.2) >0.3], tab$genes), ] |> na.omit()
+#tab1 <- tab[match(WtVMutInHi.Markers$genes[-log10(WtVMutInHi.Markers$p_val_adj) >150 & abs(WtVMutInHi.Markers$avg_log2FC) >2 & abs(WtVMutInHi.Markers$pct.1 - WtVMutInHi.Markers$pct.2) >0.3], tab$genes), ] |> na.omit()
+tab <- tab[order(match(tab$genes,WtVMutInHiLate.Markers$genes )), ]
+tmp <- WtVMutInHiLate.Markers[abs(WtVMutInHiLate.Markers$pct.1 - WtVMutInHiLate.Markers$pct.2) > 0.5,]
+tab1 <- subset(tab, tab$genes %in% tmp$genes)
+a3 <- DotPlot(test1,tab1$genes,scale=F)+coord_flip()+ theme(axis.text.x = element_text(angle = 30, hjust=1))+scale_color_batlow(reverse=T)+scale_x_discrete(labels=tab$names)
+a4 <- ggplot(WtVMutInHiLate.Markers, aes(avg_log2FC, -log10(p_val_adj),col=highlight))+
+    geom_point(alpha=0.7,size=1)+
+    scale_colour_manual(values=c(okabe5[1],okabe5[2],'black','white'))+
+    scale_fill_manual(values=c(okabe5[1],okabe5[2],'black','white'))+
+ #   geom_text_repel(size=3,alpha=1,colour='black',segment.size=0.1,data = subset(WtVMutInHi.Markers, genes %in% list), aes(label=names,fill=highlight),max.overlaps=Inf,force=3,force_pull=0.5,ylim=c(5,Inf),direction='both')+    
+    theme_classic()+theme(legend.position='none')+coord_flip()
+a3+a4
+Idents(test1) <- test1$Iv
+DefaultAssay(test1) <- "RNA"
+HiVsLoLate.markers <- FindMarkers(test1, ident.1="hi", ident.2="lo",recorrect_umi=FALSE)
+HiVsLoLate.markers <- HiVsLoLate.markers[order(HiVsLoLate.markers$avg_log2FC, decreasing = TRUE), ]
+HiVsLoLate.markers$genes <- row.names(HiVsLoLate.markers)
+tab <- read.table('HiVsLoLate.markers_naems.txt',h=T)
+tab <- tab[order(match(tab$genes,HiVsLoLate.markers$genes )), ]
+b3 <- DotPlot(test1,features=tab$genes,scale=FALSE,group.by='Iv')+coord_flip()+ theme(axis.text.x = element_text(angle = 30, hjust=1))+scale_color_batlow(reverse=T)+scale_x_discrete(labels=tab$names)
+HiVsLoLate.markers$genes <- row.names(HiVsLoLate.markers)
+HiVsLoLate.markers <- merge(HiVsLoLate.markers,tab,by='genes',all.x=TRUE)
+HiVsLoLate.markers <- HiVsLoLate.markers[order(HiVsLoLate.markers$p_val_adj), ]
+HiVsLoLate.markers$highlight <- ifelse(HiVsLoLate.markers$genes %in% chr15list, "chr15",
+                                       ifelse(HiVsLoLate.markers$names!='NA',"sig","no"))
+### shortened list for volc plot 
+##do the ggplot volcano
+b4 <- ggplot(HiVsLoLate.markers, aes(avg_log2FC, -log10(p_val_adj),col=highlight))+
+    geom_point(alpha=0.7,size=1)+
+    scale_colour_manual(values=c(okabe5[1],okabe5[2],'black','white'))+
+    scale_fill_manual(values=c(okabe5[1],okabe5[2],'black','white'))+
+ #   geom_text_repel(size=3,alpha=1,colour='black',segment.size=0.1,data = HiVsLo.markers, aes(label=names,fill=highlight),max.overlaps=Inf,force=3,force_pull=0.5,ylim=c(5,150),direction='both')+    
+    theme_classic()+theme(legend.position='none')+coord_flip()
+b3+b4
+HiVsLoLate.markers[HiVsLoLate.markers$genes == 'Hmel.Hmel218003oG49,]
+HiVsLoLate.markers[HiVsLoLate.markers$genes == 'Hmel.Hmel218003oG49',]
+Idents(test1) <- test1$Iv
+DefaultAssay(test1) <- "RNA"
+HiVsLoLate.markers <- FindMarkers(test1, ident.1="hi", ident.2="lo",recorrect_umi=FALSE)
+HiVsLoLate.markers <- HiVsLoLate.markers[order(HiVsLoLate.markers$avg_log2FC, decreasing = TRUE), ]
+HiVsLoLate.markers$genes <- row.names(HiVsLoLate.markers)
+tab <- read.table('HiVsLoLate.markers_naems.txt',h=T)
+tab <- tab[order(match(tab$genes,HiVsLoLate.markers$genes )), ]
+b3 <- DotPlot(test1,features=tab$genes,scale=FALSE,group.by='Iv')+coord_flip()+ theme(axis.text.x = element_text(angle = 30, hjust=1))+scale_color_batlow(reverse=T)+scale_x_discrete(labels=tab$names)
+HiVsLoLate.markers$genes <- row.names(HiVsLoLate.markers)
+HiVsLoLate.markers <- merge(HiVsLoLate.markers,tab,by='genes',all.x=TRUE)
+HiVsLoLate.markers <- HiVsLoLate.markers[order(HiVsLoLate.markers$p_val_adj), ]
+HiVsLoLate.markers$highlight <- ifelse(HiVsLoLate.markers$genes %in% chr15list, "chr15",
+                                       ifelse(HiVsLoLate.markers$names!='NA',"sig","no"))
+### shortened list for volc plot 
+##do the ggplot volcano
+b4 <- ggplot(HiVsLoLate.markers, aes(avg_log2FC, -log10(p_val_adj),col=highlight))+
+    geom_point(alpha=0.7,size=1)+
+    scale_colour_manual(values=c(okabe5[1],okabe5[2],'black','white'))+
+    scale_fill_manual(values=c(okabe5[1],okabe5[2],'black','white'))+
+ #   geom_text_repel(size=3,alpha=1,colour='black',segment.size=0.1,data = HiVsLo.markers, aes(label=names,fill=highlight),max.overlaps=Inf,force=3,force_pull=0.5,ylim=c(5,150),direction='both')+    
+    theme_classic()+theme(legend.position='none')+coord_flip()
+a3+a4
+b3+b4
+length(HiVsLoLate.markers[HiVsLoLate.markers$avg_log2FC > 0 & HiVsLoLate.markers$p_val_adj > 50,1])
+head(HiVsLoLate.markers)
+nrow(HiVsLoLate.markers)
+length(WtVMutInHiLate.Markers[WtVMutInHiLate.Markers$avg_log2FC > 0 &WtVMutInHiLate.Markers$p_val_adj > 50,1])
+nrow(WtVMutInHiLate.Markers[WtVMutInHiLate.Markers$avg_log2FC > 0 &WtVMutInHiLate.Markers$p_val_adj > 50,])
+head(WtVMutInHiLate.Markers)
+nrow(WtVMutInHiLate.Markers[WtVMutInHiLate.Markers$avg_log2FC > 0 &WtVMutInHiLate.Markers$p_val_adj < 1e-50,])
+nrow(WtVMutInHiLate.Markers[WtVMutInHiLate.Markers$avg_log2FC > 0 &WtVMutInHiLate.Markers$p_val_adj < 1e-25,])
+nrow(WtVMutInHiLate.Markers[WtVMutInHiLate.Markers$avg_log2FC < 0 &WtVMutInHiLate.Markers$p_val_adj < 1e-25,])
+(WtVMutInHiLate.Markers[WtVMutInHiLate.Markers$avg_log2FC > 0 &WtVMutInHiLate.Markers$p_val_adj < 1e-25,1])
+nrow(WtVMutInHiLate.Markers[WtVMutInHiLate.Markers$avg_log2FC < 0 &WtVMutInHiLate.Markers$p_val_adj < 1e-25,])
+(WtVMutInHiLate.Markers[WtVMutInHiLate.Markers$avg_log2FC < 0 &WtVMutInHiLate.Markers$p_val_adj < 1e-25,])
+(WtVMutInHiLate.Markers[WtVMutInHiLate.Markers$avg_log2FC < 0 &WtVMutInHiLate.Markers$p_val_adj < 1e-25,1])
+UpGenePANGEA <- read.csv('UpGenesLate_DirectGoEnrichment_PANGEA_3.csv',h=T)
+UpGenePANGEA<- (subset(UpGenePANGEA, Benjamini...Yekutieli < 0.05))
+aA <- ggplot(UpGenePANGEA, aes(x = Count.Overlap.Gene, y = reorder(Gene.Set.Name, Fold.Enrichment), 
+               size = Fold.Enrichment, color = Benjamini...Yekutieli)) +
+  geom_point() +
+#  facet_grid(Cluster~., scales = "free_y", space = "free_y") +
+  theme_bw(base_size = 12) +
+  labs(title = "GO Enrichment by Cluster",
+       x = "Count",
+       y = "DirectGO Term",
+       color = "Adjusted p-value",
+       size = "Fold Enrichment") +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    strip.text = element_text(face = "bold")
+  )+
+  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40))
+# the down genes
+DownGenePANGEA <- read.csv('DownGenesLate_DirectGoEnrichment_PANGEA_2.csv',h=T)
+DownGenePANGEA<- (subset(DownGenePANGEA, Benjamini...Yekutieli < 0.05))
+bA <- ggplot(DownGenePANGEA, aes(x = Count.Overlap.Gene, y = reorder(Gene.Set.Name, Fold.Enrichment), 
+               size = Fold.Enrichment, color = Benjamini...Hochberg)) +
+  geom_point() +
+#  facet_grid(Cluster~., scales = "free_y", space = "free_y") +
+  theme_bw(base_size = 12) +
+  labs(title = "GO Enrichment by Cluster",
+       x = "Count",
+       y = "DirectGO Term",
+       color = "Adjusted p-value",
+       size = "Fold Enrichment") +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    strip.text = element_text(face = "bold")
+  )+
+  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40))
+plot_grid(aA,bA,ncol=1)
+DownGenePANGEA <- read.csv('DownGenesLate_DirectGoEnrichment_PANGEA_3.csv',h=T)
+DownGenePANGEA<- (subset(DownGenePANGEA, Benjamini...Yekutieli < 0.05))
+bA <- ggplot(DownGenePANGEA, aes(x = Count.Overlap.Gene, y = reorder(Gene.Set.Name, Fold.Enrichment), 
+               size = Fold.Enrichment, color = Benjamini...Hochberg)) +
+  geom_point() +
+#  facet_grid(Cluster~., scales = "free_y", space = "free_y") +
+  theme_bw(base_size = 12) +
+  labs(title = "GO Enrichment by Cluster",
+       x = "Count",
+       y = "DirectGO Term",
+       color = "Adjusted p-value",
+       size = "Fold Enrichment") +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    strip.text = element_text(face = "bold")
+  )+
+  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40))
+plot_grid(aA,bA,ncol=1)
+bA
+DownGenePANGEA <- read.csv('DownGenesLate_DirectGoEnrichment_PANGEA_3.csv',h=T)
+DownGenePANGEA<- (subset(DownGenePANGEA, Benjamini...Yekutieli < 0.05))
+bA <- ggplot(DownGenePANGEA, aes(x = Count.Overlap.Gene, y = reorder(Gene.Set.Name, Fold.Enrichment), 
+               size = Fold.Enrichment, color = Benjamini...Hochberg)) +
+  geom_point() +
+#  facet_grid(Cluster~., scales = "free_y", space = "free_y") +
+  theme_bw(base_size = 12) +
+  labs(title = "GO Enrichment by Cluster",
+       x = "Count",
+       y = "DirectGO Term",
+       color = "Adjusted p-value",
+       size = "Fold Enrichment") +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    strip.text = element_text(face = "bold")
+  )+
+  scale_y_discrete(labels = function(x) stringr::str_wrap(x, width = 40))
+plot_grid(aA,bA,ncol=1)
+plot_grid(aA,bA,ncol=1)
+dev.copy(pdf, 'GoTermsOutLate.pdf',width=7,height=7)
+dev.off()
+b3
+dev.copy(pdf,'DotPlot_HiVsLo.Late.pdf',width=5,height=8)
+dev.off()
+q()

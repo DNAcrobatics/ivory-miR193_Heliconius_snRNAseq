@@ -12,3 +12,5 @@ scripts/snrna/03_cell_cycle.R	bd37096198ba982009362f2b0703bb956eb9f45811383f067b
 scripts/snrna/04_classify_ivory.R	66df08d935de2bd522d5f3e2796c6b1675b2073e9fc4d5c4e4ff2d8337f71997	cleaned/adapted from supplied source; see scripts/README.md and CLEANUP_NOTES.md	manual review; R runtime unavailable
 scripts/snrna/05_find_markers.R	ee28206b9a3b373e4ecf1e908dac66c6efe1b858d7fb5f9f737394815408b6f4	cleaned/adapted from supplied source; see scripts/README.md and CLEANUP_NOTES.md	manual review; R runtime unavailable
 scripts/snrna/06_expression_ranking.R	90ec16e36e793afc95fa6e8e7587caa4c69d7c265323cdca862dcb60e3bed15c	cleaned/adapted from supplied source; see scripts/README.md and CLEANUP_NOTES.md	manual review; R runtime unavailable
+scripts/locus/plot_barcode_reads.R	a5220236c941a5581e8354f9efdbe0d985b0cd981fbbbd42412e5884ee5aa0bc	cleaned reconstruction / inspection utility; see docs/DRIVE_INTAKE.md	manual review; R runtime unavailable
+tools/inspect_workspace.R	ca4facbaae15f51521a8af218c2cfd1b649ee7bf4226ae56b91e386f35a59885	cleaned reconstruction / inspection utility; see docs/DRIVE_INTAKE.md	manual review; R runtime unavailable

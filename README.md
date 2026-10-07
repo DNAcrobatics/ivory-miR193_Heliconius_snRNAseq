@@ -2,7 +2,7 @@
 
 Companion code collection for the Nature Communications paper. **Start with the analysis index below.** The repository follows the numbered, annotated workflow format of [Luca’s Anticarsia melanism repository](https://github.com/MilesLuca/Anticarsia_melanism).
 
-**The working code is now cleaned and annotated in [scripts/](scripts/README.md).** Twelve entry scripts cover counting, Seurat preprocessing/integration, cell-cycle scoring, ivory classification, DE, expression ranking and plotting. Each numbered workflow explains inputs, outputs, software and execution. Final input recovery and result validation are still in progress.
+**The working code is now cleaned and annotated in [scripts/](scripts/README.md).** Thirteen entry scripts cover counting, Seurat preprocessing/integration, cell-cycle scoring, ivory classification, DE, expression ranking and plotting. Each numbered workflow explains inputs, outputs, software and execution. Final input recovery and result validation are still in progress.
 
 - **Clean scripts and run commands:** [scripts/README.md](scripts/README.md)
 - **Code provenance guide:** [README_code.md](README_code.md)
@@ -56,3 +56,6 @@ Keep native feature identifiers, including `Ivory`, as used in each assay. Gene-
 The [file request checklist](docs/FILE_REQUESTS.md) gives filenames, priorities and the decisions each file resolves. The [collection helper](tools/collect_project_code.py) can collect code and small text inputs from your project directories. Original snapshots remain in [archive/](archive/README.md); manifests and intake notes remain in `metadata/` and `docs/`.
 
 Before release, recover the remaining source, resolve the final analysis choices, validate against paper outputs, choose a license, and archive a versioned release with a DOI. No archive DOI or validated final environment is claimed yet.
+# Drive recovery update
+
+Additional source scripts and small analysis inputs have been recovered from the shared Drive folder, including the barcode read/ribbon plotter, GO exports, gene lists and historical metadata. The locus plotter is now cleaned and annotated in `scripts/locus/plot_barcode_reads.R`. See [the intake and remaining requests](docs/DRIVE_INTAKE.md); final saved objects, executed branch choices and result matching are still needed.

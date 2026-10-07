@@ -113,3 +113,24 @@ STAR prefixes now end in a dot (`redo.<sample>.`) to separate names cleanly; doc
 Requirements: Bash, awk, STAR, samtools; R with Seurat, sctransform, SeuratDisk for H5 input/export, edgeR for CPM, ggplot2 and ggrepel for labelled volcano plots. Exact versions still need the original environment. Multi-layer Seurat inputs may need a verified layer preparation step; scripts do not silently join layers. The historical 2023 glmGamPoi/cell-cycle-regression experiments remain archived and have not been collapsed into this March branch.
 
 See [CLEANUP_NOTES.md](../docs/CLEANUP_NOTES.md) for changes, checks and current limitations. No replacement RNAhybrid, Nanopore or reference-editing algorithms have been invented for missing code.
+# Drive additions (7 October 2026)
+
+`locus/plot_barcode_reads.R` cleans the recovered read/ribbon loop. It requires Rsamtools, GenomicRanges, IRanges, ggplot2 and scico. Run from the repository root with an indexed strand-filtered BAM containing CB tags:
+
+```bash
+Rscript --vanilla scripts/locus/plot_barcode_reads.R \
+  --bam /path/to/iv_20.CortexLocus.fw.bam \
+  --metadata data/drive/iv_reanalysis/bcdf.all.txt \
+  --sample iv_20 --contig Hmel215003o \
+  --start 1400000 --end 1600000 --output-prefix results/locus/iv_20
+```
+
+Set the interval to match the actual extraction. Outputs are vector read/ribbon PDFs, source tables and matching counts. Ribbons represent the historical occupied-position calculation, not basewise coverage; see [DRIVE_INTAKE.md](../docs/DRIVE_INTAKE.md).
+
+To recover tables and metadata from a saved workspace:
+
+```bash
+Rscript --vanilla tools/inspect_workspace.R /path/to/workspace.RData workspace_inventory
+```
+
+This creates an object inventory and table/Seurat metadata exports without sourcing analysis scripts. Saved Seurat objects require compatible packages and enough memory. This utility has not yet been executed against a project workspace.

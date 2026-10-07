@@ -1,5 +1,7 @@
 # Remaining files for the ivory mir-193 paper code repository
 
+**7 October 2026 update:** [DRIVE_INTAKE.md](DRIVE_INTAKE.md) is the current prioritized request list. The Drive recovery supplies the GO CSVs, gene/protein lists, homolog/plot-label lookups, historical sample/index sheets and barcode read/ribbon plotting code requested below. Saved R/Seurat workspaces have not appeared in the accessible listings; please provide direct links or exact cluster paths. The older detailed checklist below remains useful for unrecovered branches, but recovered inputs no longer need to be resent.
+
 Updated 2026-10-01 after inspecting the manuscript, supplementary figures, reporting summaries, editorial checklist, two pasted analysis versions and the inline source. The broad first-pass requests have now been narrowed to the files referenced by the recovered code. No need to resend the manuscript or `CellCycleGenes.txt` already supplied.
 
 ## Received and incorporated
