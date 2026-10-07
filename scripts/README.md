@@ -134,3 +134,24 @@ Rscript --vanilla tools/inspect_workspace.R /path/to/workspace.RData workspace_i
 ```
 
 This creates an object inventory and table/Seurat metadata exports without sourcing analysis scripts. Saved Seurat objects require compatible packages and enough memory. This utility has not yet been executed against a project workspace.
+
+
+## Compact saved-workspace recovery
+
+The `.RData` is now available in Drive but is too large for this runtime. In an R session with the workspace already loaded, source `tools/export_workspace_audit.R` and call `export_workspace_audit(outdir = "ivory_workspace_audit")`. This avoids another full workspace load and exports tables/metadata without matrices. The fresh-process `tools/inspect_workspace.R` wrapper remains available on a sufficiently provisioned machine. See [WORKSPACE_AUDIT.md](../docs/WORKSPACE_AUDIT.md) for findings and exact export instructions.
+
+For the recovered late GO PDF candidate, history and panel term labels support the `_3` files with BY filtering for both panels, BY coloring for up and BH coloring for down:
+
+```bash
+Rscript scripts/plots/go_enrichment.R \
+  --input data/drive/iv_reanalysis/UpGenesLate_DirectGoEnrichment_PANGEA_3.csv \
+  --filter-column Benjamini...Yekutieli --color-column Benjamini...Yekutieli \
+  --cutoff 0.05 --title 'Late upregulated genes' --output results/late_up.go.pdf
+
+Rscript scripts/plots/go_enrichment.R \
+  --input data/drive/iv_reanalysis/DownGenesLate_DirectGoEnrichment_PANGEA_3.csv \
+  --filter-column Benjamini...Yekutieli --color-column Benjamini...Hochberg \
+  --cutoff 0.05 --title 'Late downregulated genes' --output results/late_down.go.pdf
+```
+
+These produce separate clean PDFs, not the original cowplot assembly. Preserve the 27 up rows even though there are only 23 distinct display labels. This matching supports a saved panel candidate, not a complete final-paper validation.

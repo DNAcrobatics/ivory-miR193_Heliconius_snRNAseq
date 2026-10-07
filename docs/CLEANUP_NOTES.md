@@ -1,6 +1,6 @@
 # Clean-script preparation
 
-Prepared 2026-10-02 in response to the request for cleaned, annotated scripts. The main code now lives in `scripts/`; original scientific files remain unchanged in `archive/`. The 12 entry scripts and shared base-R helper have explicit inputs and documentation in [scripts/README.md](../scripts/README.md).
+Prepared 2026-10-02 in response to the request for cleaned, annotated scripts. The main code now lives in `scripts/`; original scientific files remain unchanged in `archive/`. The 13 entry scripts and shared base-R helper have explicit inputs and documentation in [scripts/README.md](../scripts/README.md).
 
 ## Repairs and adaptations
 
@@ -25,3 +25,8 @@ STAR counting options and read order are unchanged. STAR output prefixes gain a 
 - New local Markdown links were checked.
 
 R and the scientific packages are unavailable in this workspace. R scripts have been manually reviewed but have not been parsed by R or executed. Run them in the recovered environment with the actual data, then compare against final DE/source tables and vector PDFs. Missing inputs and competing final parameter branches are tracked in [FILE_REQUESTS.md](FILE_REQUESTS.md).
+
+
+## Workspace audit additions
+
+The updated inspector delegates to `tools/export_workspace_audit.R`, which can run inside an already loaded session and exports compressed saved tables, Seurat metadata/identities, assay/layer summaries, command records, ggplot inputs and small vectors. Large matrices are excluded. This is recovery tooling, not a replacement analysis. It has been manually reviewed but not executed here; see [WORKSPACE_AUDIT.md](WORKSPACE_AUDIT.md). The refreshed history is unchanged. Saved-object validation remains pending; no history command is treated as proof of successful execution.

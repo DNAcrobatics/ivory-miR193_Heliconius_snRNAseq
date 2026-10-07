@@ -1,0 +1,22 @@
+source	sha256	line	command	interpretation
+archive/drive/iv_reanalysis/Rhistory.txt	37907d297559266c7c474fbd712f5d7f4b41464ef92025377f0faae4bfb98b74	149	Hm_sops <- SCTransform(Hm_sops, verbose = T, variable.features.n = 5000,vars.to.regress='time')	historical SCT/time-regression trial; execution unverified
+archive/drive/iv_reanalysis/Rhistory.txt	37907d297559266c7c474fbd712f5d7f4b41464ef92025377f0faae4bfb98b74	153	Hm_sops <- FindClusters(Hm_sops, resolution = 2)	historical resolution 2 trial; execution unverified
+archive/drive/iv_reanalysis/Rhistory.txt	37907d297559266c7c474fbd712f5d7f4b41464ef92025377f0faae4bfb98b74	170	head(UpGenePANGEA)	GO initial up CSV trial
+archive/drive/iv_reanalysis/Rhistory.txt	37907d297559266c7c474fbd712f5d7f4b41464ef92025377f0faae4bfb98b74	273	UpGenePANGEA <- read.csv('UpGenesLate_DirectGoEnrichment_PANGEA_2.csv',h=T)	GO older _2 up CSV trial
+archive/drive/iv_reanalysis/Rhistory.txt	37907d297559266c7c474fbd712f5d7f4b41464ef92025377f0faae4bfb98b74	310	DefaultAssay(test1) <- 'RNA'	RNA threshold branch
+archive/drive/iv_reanalysis/Rhistory.txt	37907d297559266c7c474fbd712f5d7f4b41464ef92025377f0faae4bfb98b74	311	barcodes <- subset(x = test1, Ivory > 1 & race=='iv')	iv threshold >1
+archive/drive/iv_reanalysis/Rhistory.txt	37907d297559266c7c474fbd712f5d7f4b41464ef92025377f0faae4bfb98b74	312	barcodes2<- subset(x = test1, Ivory > 4 & race!='iv')	other threshold >4
+archive/drive/iv_reanalysis/Rhistory.txt	37907d297559266c7c474fbd712f5d7f4b41464ef92025377f0faae4bfb98b74	319	Idents(test1) <- test1$Iv	active identities assigned to hi/lo
+archive/drive/iv_reanalysis/Rhistory.txt	37907d297559266c7c474fbd712f5d7f4b41464ef92025377f0faae4bfb98b74	321	WtVMutInHiLate.Markers <- FindMarkers(subset(test1,Iv=='hi'), ident.1='wt',recorrect_umi=FALSE)	wt call after hi/lo identity assignment; unresolved
+archive/drive/iv_reanalysis/Rhistory.txt	37907d297559266c7c474fbd712f5d7f4b41464ef92025377f0faae4bfb98b74	337	WtVMutInHiLate.Markers <- FindMarkers(subset(test1,Iv=='hi'), ident.1='wt',recorrect_umi=FALSE)	repeated wt call; state unresolved
+archive/drive/iv_reanalysis/Rhistory.txt	37907d297559266c7c474fbd712f5d7f4b41464ef92025377f0faae4bfb98b74	375	"HiVsLoLate.markers <- FindMarkers(test1, ident.1=""hi"", ident.2=""lo"",recorrect_umi=FALSE)"	late hi/lo RNA call
+archive/drive/iv_reanalysis/Rhistory.txt	37907d297559266c7c474fbd712f5d7f4b41464ef92025377f0faae4bfb98b74	398	"DefaultAssay(test1) <- ""RNA"""	RNA assay explicit
+archive/drive/iv_reanalysis/Rhistory.txt	37907d297559266c7c474fbd712f5d7f4b41464ef92025377f0faae4bfb98b74	399	"HiVsLoLate.markers <- FindMarkers(test1, ident.1=""hi"", ident.2=""lo"",recorrect_umi=FALSE)"	late hi/lo RNA call
+archive/drive/iv_reanalysis/Rhistory.txt	37907d297559266c7c474fbd712f5d7f4b41464ef92025377f0faae4bfb98b74	433	UpGenePANGEA <- read.csv('UpGenesLate_DirectGoEnrichment_PANGEA_3.csv',h=T)	final GO up _3 CSV reference
+archive/drive/iv_reanalysis/Rhistory.txt	37907d297559266c7c474fbd712f5d7f4b41464ef92025377f0faae4bfb98b74	434	UpGenePANGEA<- (subset(UpGenePANGEA, Benjamini...Yekutieli < 0.05))	final GO up BY filter
+archive/drive/iv_reanalysis/Rhistory.txt	37907d297559266c7c474fbd712f5d7f4b41464ef92025377f0faae4bfb98b74	436	               size = Fold.Enrichment, color = Benjamini...Yekutieli)) +	final GO up BY coloring
+archive/drive/iv_reanalysis/Rhistory.txt	37907d297559266c7c474fbd712f5d7f4b41464ef92025377f0faae4bfb98b74	488	DownGenePANGEA <- read.csv('DownGenesLate_DirectGoEnrichment_PANGEA_3.csv',h=T)	final GO down _3 CSV reference
+archive/drive/iv_reanalysis/Rhistory.txt	37907d297559266c7c474fbd712f5d7f4b41464ef92025377f0faae4bfb98b74	489	DownGenePANGEA<- (subset(DownGenePANGEA, Benjamini...Yekutieli < 0.05))	final GO down BY filter
+archive/drive/iv_reanalysis/Rhistory.txt	37907d297559266c7c474fbd712f5d7f4b41464ef92025377f0faae4bfb98b74	491	               size = Fold.Enrichment, color = Benjamini...Hochberg)) +	final GO down BH coloring
+archive/drive/iv_reanalysis/Rhistory.txt	37907d297559266c7c474fbd712f5d7f4b41464ef92025377f0faae4bfb98b74	507	dev.copy(pdf, 'GoTermsOutLate.pdf',width=7,height=7)	combined late GO PDF export attempt
+archive/drive/iv_reanalysis/Rhistory.txt	37907d297559266c7c474fbd712f5d7f4b41464ef92025377f0faae4bfb98b74	510	dev.copy(pdf,'DotPlot_HiVsLo.Late.pdf',width=5,height=8)	late dotplot export attempt

@@ -13,4 +13,5 @@ scripts/snrna/04_classify_ivory.R	66df08d935de2bd522d5f3e2796c6b1675b2073e9fc4d5
 scripts/snrna/05_find_markers.R	ee28206b9a3b373e4ecf1e908dac66c6efe1b858d7fb5f9f737394815408b6f4	cleaned/adapted from supplied source; see scripts/README.md and CLEANUP_NOTES.md	manual review; R runtime unavailable
 scripts/snrna/06_expression_ranking.R	90ec16e36e793afc95fa6e8e7587caa4c69d7c265323cdca862dcb60e3bed15c	cleaned/adapted from supplied source; see scripts/README.md and CLEANUP_NOTES.md	manual review; R runtime unavailable
 scripts/locus/plot_barcode_reads.R	a5220236c941a5581e8354f9efdbe0d985b0cd981fbbbd42412e5884ee5aa0bc	cleaned reconstruction / inspection utility; see docs/DRIVE_INTAKE.md	manual review; R runtime unavailable
-tools/inspect_workspace.R	ca4facbaae15f51521a8af218c2cfd1b649ee7bf4226ae56b91e386f35a59885	cleaned reconstruction / inspection utility; see docs/DRIVE_INTAKE.md	manual review; R runtime unavailable
+tools/inspect_workspace.R	e06abafc51d770742f7cd13c980de5230bf51abd28f85dc1f04446ed0cc66f62	fresh-process wrapper around compact audit exporter; see WORKSPACE_AUDIT.md	manual review; R runtime unavailable
+tools/export_workspace_audit.R	39ee6bfda5293a7067999e5c9bed4ca8ae3f593d1528ca1f7dfa924813370a55	saved-state recovery; no scientific recomputation; see WORKSPACE_AUDIT.md	manual review; R runtime unavailable
