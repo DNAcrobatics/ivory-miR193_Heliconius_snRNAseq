@@ -1,5 +1,7 @@
 # Remaining files for the ivory mir-193 paper code repository
 
+**8 October 2026 update:** The compact export has been received and inspected. [SAVED_WORKSPACE_AUDIT.md](SAVED_WORKSPACE_AUDIT.md) documents recovered metadata, assay summaries, four plotted DE tables and frozen candidate memberships. Earlier requests below for another compact export, these tables or saved per-cell metadata are superseded. Final execution provenance and scientific reruns remain pending.
+
 **7 October 2026 update:** [DRIVE_INTAKE.md](DRIVE_INTAKE.md) is the current prioritized request list. The Drive recovery supplies the GO CSVs, gene/protein lists, homolog/plot-label lookups, historical sample/index sheets and barcode read/ribbon plotting code requested below. The saved `.RData` is now listed at 15.36 GB. Its link is recovered; the next request is the compact export described in [WORKSPACE_AUDIT.md](WORKSPACE_AUDIT.md), not another full workspace upload. The older detailed checklist below remains useful for unrecovered branches, but recovered inputs no longer need to be resent.
 
 Updated 2026-10-01 after inspecting the manuscript, supplementary figures, reporting summaries, editorial checklist, two pasted analysis versions and the inline source. The broad first-pass requests have now been narrowed to the files referenced by the recovered code. No need to resend the manuscript or `CellCycleGenes.txt` already supplied.

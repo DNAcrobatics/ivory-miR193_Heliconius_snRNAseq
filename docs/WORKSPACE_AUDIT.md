@@ -1,5 +1,7 @@
 # Saved-workspace audit — 6 October 2026 (New York)
 
+**8 October 2026 update:** The compact export has been received and inspected. [SAVED_WORKSPACE_AUDIT.md](SAVED_WORKSPACE_AUDIT.md) documents recovered metadata, assay summaries, four plotted DE tables and frozen candidate memberships. Earlier requests below for another compact export, these tables or saved per-cell metadata are superseded. Final execution provenance and scientific reruns remain pending.
+
 ## Upload and inspection status
 
 The refreshed Drive listing exposes [.RData](https://drive.google.com/file/d/1FKwR1xzCkHQ4AIl9E9lU7SXYYu_Q3oPh/view?usp=drivesdk) at **15,360,101,380 bytes** (14.31 GiB). This agrees with the rounded 14G local listing. The connector supplied neither an upload-progress field nor the requested MD5 checksum; the full binary has not been downloaded, checksum-validated, decompressed or loaded. Its presence and size are confirmed, not its loadability or saved object contents.

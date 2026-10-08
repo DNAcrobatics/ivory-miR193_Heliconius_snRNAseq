@@ -155,3 +155,7 @@ Rscript scripts/plots/go_enrichment.R \
 ```
 
 These produce separate clean PDFs, not the original cowplot assembly. Preserve the 27 up rows even though there are only 23 distinct display labels. This matching supports a saved panel candidate, not a complete final-paper validation.
+
+## Frozen saved-state recovery
+
+[snrna/07_restore_saved_metadata.R](snrna/07_restore_saved_metadata.R) restores cohort-specific biological labels onto an existing expression object. Use it with recovered memberships instead of recalculating parent high/low assignments. See [the saved workspace audit](../docs/SAVED_WORKSPACE_AUDIT.md) for usage and limitations. Four plotted DE tables and metadata are recovered; actual DE assay/test/filter provenance and final branch selection remain unconfirmed.

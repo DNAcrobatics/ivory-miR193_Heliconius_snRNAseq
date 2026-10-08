@@ -1,5 +1,7 @@
 # Drive recovery — 7 October 2026
 
+**8 October 2026 update:** The compact export has been received and inspected. [SAVED_WORKSPACE_AUDIT.md](SAVED_WORKSPACE_AUDIT.md) documents recovered metadata, assay summaries, four plotted DE tables and frozen candidate memberships. Earlier requests below for another compact export, these tables or saved per-cell metadata are superseded. Final execution provenance and scientific reruns remain pending.
+
 The supplied **Joe** folder was inventoried through its `iv_reanalysis` and `Ivory_Snuc` branches, including analysis, filtered-count, locus and environment subfolders. The initial connector listing exposed many small inputs and PDFs but no saved workspace. **Later audit:** the 15.36 GB `.RData` is now listed; see [WORKSPACE_AUDIT.md](WORKSPACE_AUDIT.md) for verified status, history findings and the compact export needed to inspect its contents. Several nested folders returned no files, including filtered matrix and BAM folders. This records what was accessible; it does not establish that the underlying project lacks those files.
 
 ## Recovered material

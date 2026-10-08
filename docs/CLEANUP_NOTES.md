@@ -30,3 +30,7 @@ R and the scientific packages are unavailable in this workspace. R scripts have 
 ## Workspace audit additions
 
 The updated inspector delegates to `tools/export_workspace_audit.R`, which can run inside an already loaded session and exports compressed saved tables, Seurat metadata/identities, assay/layer summaries, command records, ggplot inputs and small vectors. Large matrices are excluded. This is recovery tooling, not a replacement analysis. It has been manually reviewed but not executed here; see [WORKSPACE_AUDIT.md](WORKSPACE_AUDIT.md). The refreshed history is unchanged. Saved-object validation remains pending; no history command is treated as proof of successful execution.
+
+## Saved-export recovery — 8 October 2026
+
+The user executed the exporter. Selected outputs pass manifest checksum and DE/plot-input comparisons; see [SAVED_WORKSPACE_AUDIT.md](SAVED_WORKSPACE_AUDIT.md). Added 07_restore_saved_metadata.R to restore each saved subset independently. Parent high/low labels disagree with contrast subsets and must not replace them. Original settings remain unchanged. The helper was reviewed but not run here; data checks are not a scientific rerun.
