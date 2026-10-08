@@ -16,3 +16,7 @@ No scientific analysis has been rerun. The full dataset, final object builder, e
 Recover final inputs and environments; reconcile sample stages, integration parameters, high/low thresholds, DE methods and GO correction settings; run each selected workflow; compare numerical outputs and vector plots with final figure source data. Record exact commands, versions, seeds, exclusions and checksums. Then create a versioned archive and add its DOI to the citation metadata.
 
 See [INTAKE_REVIEW.md](docs/INTAKE_REVIEW.md), [REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md) and [PROVENANCE.md](docs/PROVENANCE.md) for the detailed evidence and remaining work.
+
+## miR-193 predictions and comparative annotations
+
+The executed parser reproduces 2,079 predictions across 1,265 genes and the supplied gene summaries exactly. Comparative annotations reproduce all 733 S8 hit counts/Boolean fields and 15 conserved candidates. One missing S8 energy is reported without modifying the original. Twelve text checksums and mock launcher checks pass. RNAhybrid and R scientific workflows were not rerun. See [target validation](docs/TARGET_VALIDATION.md) for scope and binary-input limitations.

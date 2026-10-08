@@ -43,3 +43,7 @@ You do not need to resend the recovered GO exports, gene lists, homolog lookup, 
 
 Downloaded file sizes were checked against Drive metadata and each copied file was hashed. CSV headers and row counts were inspected; the early PANGEA CSV contains the columns expected by the existing cleaned GO plotter. R/Seurat execution and scientific result matching remain pending because this environment has no R runtime or count matrices/BAMs, and cannot load the newly listed large workspace. Originals were not run.
 
+
+## Pegasus miR intake
+
+Prediction files were supplied through GitHub branch mir-intake-20261008_203210, not Drive. The original 14 archive blobs are retained. Clean target parsing and comparative annotation are documented in analyses/10_mir193_targets.md and docs/TARGET_VALIDATION.md; FILE_REQUESTS.md now distinguishes received inputs from remaining upstream provenance.

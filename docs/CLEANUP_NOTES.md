@@ -38,3 +38,9 @@ The user executed the exporter. Selected outputs pass manifest checksum and DE/p
 ## Reference/source correction — 8 October 2026
 
 Four reference inputs are now received and structurally checked; the GTF is losslessly compressed with original/stored hashes. The supplied ivory_reanalysis(1).r is recognized as lineage/labeling/DE source. Its early WtVMutInHi.Markers call uses all of test, illustrating why the object name alone cannot prove a high-only contrast. See [REFERENCE_INTAKE.md](REFERENCE_INTAKE.md). Original code and annotations remain unchanged.
+
+## miR-193 workflow
+
+Added cleaned RNAhybrid launcher, strict verbose-output parser and comparative target annotation. Identifier collapse and shared-DE rules reproduce supplied outputs; no new prediction filters are introduced. The launcher uses micromamba run because the archived activation logs show shell initialization errors. Original intake blobs are retained unchanged. See TARGET_VALIDATION.md for executed checks and limits.
+
+The root README and script index now present workflows, inputs and reproducibility to paper readers without conversational intake updates or outstanding-file tables. Collection requirements remain in this separate maintenance document set.

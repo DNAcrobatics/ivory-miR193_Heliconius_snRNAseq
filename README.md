@@ -1,61 +1,56 @@
-# Code for *The gene ivory:mir-193 controls scale type differentiation in Heliconius butterflies*
+# ivory:mir-193 and butterfly scale differentiation
 
-Companion code collection for the Nature Communications paper. **Start with the analysis index below.** The repository follows the numbered, annotated workflow format of [Luca’s Anticarsia melanism repository](https://github.com/MilesLuca/Anticarsia_melanism).
+Analysis code accompanying *The gene ivory:mir-193 controls scale type differentiation in Heliconius butterflies* (Nature Communications).
 
-**The working code is now cleaned and annotated in [scripts/](scripts/README.md).** Thirteen entry scripts cover counting, Seurat preprocessing/integration, cell-cycle scoring, ivory classification, DE, expression ranking and plotting. Each numbered workflow explains inputs, outputs, software and execution. Final input recovery and result validation are still in progress.
+This repository contains annotated workflows for single-nucleus RNA sequencing, scale-cell classification, differential expression, gene ontology visualization, ivory locus read visualization and miR-193 target prediction. The scripts use explicit input paths and analysis parameters, and export machine-readable results alongside figures.
 
-- **Clean scripts and run commands:** [scripts/README.md](scripts/README.md)
-- **Code provenance guide:** [README_code.md](README_code.md)
-- **Cleanup changes and checks:** [CLEANUP_NOTES.md](docs/CLEANUP_NOTES.md)
-- **Data and naming conventions:** [README_DATASET.TXT](README_DATASET.TXT)
-- **Outstanding files:** [complete file request checklist](docs/FILE_REQUESTS.md)
-- **Figure coverage:** [figure-to-code map](docs/FIGURE_MAP.md)
-- **Provenance and validation:** [VALIDATION.md](VALIDATION.md), [source checksums](SOURCE_SHA256SUMS.txt)
-- **Citation:** [CITATION.cff](CITATION.cff), pending final publication details and archive DOI
-- **License:** awaiting your choice; see [license decision](docs/LICENSE_DECISION.md)
+## Analysis workflows
 
-## Analysis index
+| Workflow | Description |
+| --- | --- |
+| [Reference preparation](analyses/01_reference_preparation.md) | Genome and gene annotation resources |
+| [Alignment and counting](analyses/02_starsolo_counts.md) | STARsolo single-nucleus gene counts |
+| [Quality control and integration](analyses/03_snrna_qc_integration.md) | Import, filtering, SCTransform and integration |
+| [Scale-cell lineage](analyses/04_sop_lineage_annotation.md) | Lineage selection and cell-type annotation |
+| [Cell cycle](analyses/05_cell_cycle.md) | S and G2/M scoring and phase visualization |
+| [Ivory expression groups](analyses/06_ivory_high_low.md) | Definition of ivory-high and ivory-low nuclei |
+| [Differential expression](analyses/07_differential_expression.md) | Early and late expression comparisons |
+| [Gene ontology](analyses/08_go_enrichment.md) | Gene mapping and enrichment visualization |
+| [Ivory locus](analyses/09_locus_readthrough.md) | Strand-specific spliced reads and barcode-level plots |
+| [miR-193 targets](analyses/10_mir193_targets.md) | RNAhybrid predictions and comparative target annotations |
+| [Expression ranking](analyses/12_expression_ranking.md) | Aggregate expression and ivory ranking |
 
-| Annotated workflow | Paper connection | Current availability |
-| --- | --- | --- |
-| [01. Reference genome and annotation](analyses/01_reference_preparation.md) | Alignment and all gene-based analyses | Source needed |
-| [02. Single-nucleus alignment and counting](analyses/02_starsolo_counts.md) | Upstream of Figures 5–7 and S7–S8 | Clean script; inputs pending |
-| [03. Count import, QC and integration](analyses/03_snrna_qc_integration.md) | Full dataset underlying Figures 5–7 and S7 | Clean reconstruction; final setup confirmation needed |
-| [04. SOP lineage integration and annotation](analyses/04_sop_lineage_annotation.md) | Figure 5A–D; Supplementary Figure S7 | Clean scripts; final metadata/settings pending |
-| [05. Cell-cycle scoring and phase plots](analyses/05_cell_cycle.md) | Figure 5E/F | Clean scoring and plotting scripts |
-| [06. Define ivory-high and ivory-low scale nuclei](analyses/06_ivory_high_low.md) | Figures 5E/F and 6–7 | Clean RNA-threshold branch; final choice pending |
-| [07. Early and late differential expression](analyses/07_differential_expression.md) | Figure 6D–G and Figure 7A/B/D/E | Clean nucleus-level DE/plots; final test choice pending |
-| [08. Gene mapping, GO enrichment and plotting](analyses/08_go_enrichment.md) | Figure 7C/F | Clean plot script; enrichment provenance pending |
-| [09. Strand-specific ivory locus coverage](analyses/09_locus_readthrough.md) | Figure 6A | Clean splice-extraction script; coverage missing |
-| [10. Candidate miR-193 target prediction](analyses/10_mir193_targets.md) | Figure 7 target highlighting | Gene list supplied; prediction code needed |
-| [11. Nanopore CRISPR genotyping](analyses/11_nanopore_crispr_genotyping.md) | Supplementary Figure S6 | Source needed |
-| [12. Aggregate expression and ivory ranking](analyses/12_expression_ranking.md) | Supplementary Figure S8 | Clean scripts; final metadata/settings pending |
+Nanopore genotyping is described in [the separate workflow overview](analyses/11_nanopore_crispr_genotyping.md). Its processing was performed by a collaborator; this collection does not include an executable reconstruction of that analysis.
 
-Figures 1–4 and S1–S5 largely involve experiments, images, schematics and manual assembly. Their source material and any computational steps are tracked in the [figure map](docs/FIGURE_MAP.md), rather than represented by invented analysis code.
+## Getting started
 
-## Using the code
+1. Read the workflow page for the analysis of interest.
+2. Install the required software described in [the script guide](scripts/README.md) and [environment documentation](envs/README.md).
+3. Obtain the workflow inputs and select the corresponding sample metadata, assay and cell membership.
+4. Run the commands in the script guide from the repository root, writing each analysis branch to a separate output directory.
 
-1. Choose a workflow from the index and read its status and prerequisites.
-2. Obtain its inputs and the exact environment. Large reads, BAMs and Seurat objects belong in external data archives, with locations and checksums recorded in [the data manifest](metadata/data_manifest.tsv).
-3. Use the cleaned scripts linked from each workflow and the [execution guide](scripts/README.md). Required arguments make paths, metadata and competing settings explicit. Source-needed pages identify workflows still awaiting original code.
-4. Supply the confirmed sample metadata, selected parameter branch and contrast membership before submitting jobs. Historical reconstruction examples are labelled in the execution guide.
-5. Save results with their software logs and compare them with the final figure source tables and vector PDFs.
+The single-nucleus workflows use R with Seurat, sctransform and SeuratDisk. Alignment and locus processing use STAR and samtools. The miR-193 summary and annotation scripts use Python 3.9 or later and its standard library; prediction requires RNAhybrid.
 
-The main dependencies are reference preparation → alignment/counts → full-object integration → lineage annotation → classification/contrasts → plots. Cell-cycle scoring, coverage, target prediction and genotyping have separate prerequisites documented on their pages.
+## Repository contents
 
-## Data and naming conventions
+| Directory | Contents |
+| --- | --- |
+| [`scripts/`](scripts/README.md) | Annotated analysis scripts and execution examples |
+| [`analyses/`](analyses/) | Workflow descriptions and paper connections |
+| [`data/`](data/) | Small reference inputs and supplementary tables |
+| [`metadata/`](metadata/) | Sample information, file manifests and comparison records |
+| [`envs/`](envs/README.md) | Software requirements |
+| [`archive/`](archive/README.md) | Original source files retained for provenance |
+| [`tools/`](tools/) | Utilities for exporting saved analysis objects |
 
-Public sequencing resources cited during intake: [PRJNA1404329](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1404329) and [PRJNA1118807](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1118807). Run-to-sample mappings and file checksums still need to be recovered.
+Large sequencing files, BAMs and complete Seurat workspaces are not stored in this repository. Sequencing resources are associated with BioProjects [PRJNA1404329](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1404329) and [PRJNA1118807](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1118807). Input locations and checksums are recorded in [the data manifest](metadata/data_manifest.tsv).
 
-Historical sample times and labels in [sample_metadata_legacy_May2024.tsv](metadata/sample_metadata_legacy_May2024.tsv) are preserved as historical values. The [final sample manifest](metadata/sample_manifest.tsv) awaits confirmed metadata; revised paper stages must not be inferred from sample names.
+## Reproducibility
 
-Keep native feature identifiers, including `Ivory`, as used in each assay. Gene-symbol joins, coordinate conventions and custom annotation edits must accompany the final workflows.
+Original source files and distinct analysis branches are preserved. The scripts expose parameter choices rather than inferring them from filenames or figure captions. Saved differential-expression results have been compared with supplementary tables, and the RNAhybrid parser reproduces the supplied gene summaries. These data comparisons do not constitute a complete rerun of the R analysis or sequencing pipeline. See [validation](VALIDATION.md) and the individual workflow pages for the scope of each check.
 
-## Completing this collection
+The miR-193 workflow retains the supplied RNAhybrid energy cutoff of −25 kcal/mol. The manuscript describes −20 kcal/mol; these settings must be reconciled before interpreting the archived predictions as a rerun of that Methods description.
 
-The [file request checklist](docs/FILE_REQUESTS.md) gives filenames, priorities and the decisions each file resolves. The [collection helper](tools/collect_project_code.py) can collect code and small text inputs from your project directories. Original snapshots remain in [archive/](archive/README.md); manifests and intake notes remain in `metadata/` and `docs/`.
+## Citation and reuse
 
-Before release, recover the remaining source, resolve the final analysis choices, validate against paper outputs, choose a license, and archive a versioned release with a DOI. No archive DOI or validated final environment is claimed yet.
-# Drive recovery update
-
-Additional source scripts and small analysis inputs have been recovered from the shared Drive folder, including the barcode read/ribbon plotter, GO exports, gene lists and historical metadata. The locus plotter is now cleaned and annotated in `scripts/locus/plot_barcode_reads.R`. See [the intake and remaining requests](docs/DRIVE_INTAKE.md); final saved objects, executed branch choices and result matching are still needed.
+Please cite the accompanying paper and identify the repository revision used. Machine-readable citation metadata is available in [CITATION.cff](CITATION.cff). A software license and archived release DOI have not yet been assigned.
