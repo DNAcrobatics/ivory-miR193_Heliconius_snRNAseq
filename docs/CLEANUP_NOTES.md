@@ -34,3 +34,7 @@ The updated inspector delegates to `tools/export_workspace_audit.R`, which can r
 ## Saved-export recovery — 8 October 2026
 
 The user executed the exporter. Selected outputs pass manifest checksum and DE/plot-input comparisons; see [SAVED_WORKSPACE_AUDIT.md](SAVED_WORKSPACE_AUDIT.md). Added 07_restore_saved_metadata.R to restore each saved subset independently. Parent high/low labels disagree with contrast subsets and must not replace them. Original settings remain unchanged. The helper was reviewed but not run here; data checks are not a scientific rerun.
+
+## Reference/source correction — 8 October 2026
+
+Four reference inputs are now received and structurally checked; the GTF is losslessly compressed with original/stored hashes. The supplied ivory_reanalysis(1).r is recognized as lineage/labeling/DE source. Its early WtVMutInHi.Markers call uses all of test, illustrating why the object name alone cannot prove a high-only contrast. See [REFERENCE_INTAKE.md](REFERENCE_INTAKE.md). Original code and annotations remain unchanged.

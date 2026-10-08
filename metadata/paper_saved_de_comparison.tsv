@@ -1,0 +1,21 @@
+table	object_index	column	rows	within_display_precision	additional_tiny_values_displayed_as_zero	criterion
+Table S4	67	p_val	99	99	0	relative tolerance 0.006; exact zeros separately allowed only for abs(saved)<1e-308
+Table S4	67	avg_log2FC	99	99	0	relative tolerance 0.006; exact zeros separately allowed only for abs(saved)<1e-308
+Table S4	67	pct.1	99	99	0	relative tolerance 0.006; exact zeros separately allowed only for abs(saved)<1e-308
+Table S4	67	pct.2	99	99	0	relative tolerance 0.006; exact zeros separately allowed only for abs(saved)<1e-308
+Table S4	67	p_val_adj	99	99	0	relative tolerance 0.006; exact zeros separately allowed only for abs(saved)<1e-308
+Table S5	73	p_val	175	175	0	relative tolerance 0.006; exact zeros separately allowed only for abs(saved)<1e-308
+Table S5	73	avg_log2FC	175	175	0	relative tolerance 0.006; exact zeros separately allowed only for abs(saved)<1e-308
+Table S5	73	pct.1	175	175	0	relative tolerance 0.006; exact zeros separately allowed only for abs(saved)<1e-308
+Table S5	73	pct.2	175	175	0	relative tolerance 0.006; exact zeros separately allowed only for abs(saved)<1e-308
+Table S5	73	p_val_adj	175	175	0	relative tolerance 0.006; exact zeros separately allowed only for abs(saved)<1e-308
+Table S6	221	p_val	196	194	2	relative tolerance 0.006; exact zeros separately allowed only for abs(saved)<1e-308
+Table S6	221	avg_log2FC	196	196	0	relative tolerance 0.006; exact zeros separately allowed only for abs(saved)<1e-308
+Table S6	221	pct.1	196	196	0	relative tolerance 0.006; exact zeros separately allowed only for abs(saved)<1e-308
+Table S6	221	pct.2	196	196	0	relative tolerance 0.006; exact zeros separately allowed only for abs(saved)<1e-308
+Table S6	221	p_val_adj	196	196	0	relative tolerance 0.006; exact zeros separately allowed only for abs(saved)<1e-308
+Table S7	222	p_val	102	102	0	relative tolerance 0.006; exact zeros separately allowed only for abs(saved)<1e-308
+Table S7	222	avg_log2FC	102	102	0	relative tolerance 0.006; exact zeros separately allowed only for abs(saved)<1e-308
+Table S7	222	pct.1	102	102	0	relative tolerance 0.006; exact zeros separately allowed only for abs(saved)<1e-308
+Table S7	222	pct.2	102	102	0	relative tolerance 0.006; exact zeros separately allowed only for abs(saved)<1e-308
+Table S7	222	p_val_adj	102	102	0	relative tolerance 0.006; exact zeros separately allowed only for abs(saved)<1e-308

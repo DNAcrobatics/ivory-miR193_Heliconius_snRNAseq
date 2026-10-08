@@ -1,0 +1,31 @@
+Species	sgRNA(s)	Injected Embryos (Ninj)	L1 larvae (Nhat)	Adults(Nadu)	Crispants (Nmut)	Inj.time hAEL	Cas9:sgRNA	Hatching Rate (Nhat/Ninj)	Penetrance (Nmut/Ninj)
+Batch 1 (2024)									
+H. m. plessini	iv1/iv2	279.0	205.0	27.0	0.0	1h	500ng:250:250µl	0.112	0.0
+H.m. ecuadorensis		220.0			0.0	1h	500ng:250:250µl		0.0
+H.m. malleti		756.0			1.0	1h	500ng:250:250µl		0.001
+H. m. rosina		171.0			0.0	1h	500ng:250:250µl		0.0
+H. numata		294.0			1.0	1h	500ng:250:250µl		0.003
+H. martinae		116.0			1.0	1h	500ng:250:250µl		0.009
+H. m. plessini	mir193	1429.0	418.0	46.0	7.0	1h	500ng:500µl	0.13	0.005
+H.m. ecuadorensis		655.0			2.0	1h	500ng:500µl		0.003
+H.m. malleti		NA			NA	1h	500ng:500µl		NA
+H. m. rosina		407.0			1.0	1h	500ng:500µl		0.002
+H. numata		521.0			1.0	1h	500ng:500µl		0.002
+H. m. martinae		199.0			3.0	1h	500ng:500µl		0.015
+Batch 2 (2025)									
+H. m. plessini	iv1/iv2	84.0	13.0	-	0.0	1-2h	500ng:250:250µl	0.155	0.0
+H.m. ecuadorensis	iv1/iv2	19.0	3.0	-	0.0	1-2h	500ng:250:250µl	0.158	0.0
+H. m. rosina	iv1/iv2	113.0	21.0	-	0.0	1-2h	500ng:250:250µl	0.186	0.0
+H. e. demophoon	iv1/iv2	20.0	2.0	-	0.0	1-2h	500ng:250:250µl	0.1	0.0
+H. e. lativitta	iv1/iv2	37.0	9.0	-	0.0	1-2h	500ng:250:250µl	0.243	0.0
+H. e. notabilis	iv1/iv2	113.0	23.0	-	0.0	1-2h	500ng:250:250µl	0.204	0.0
+H. numata	iv1/iv2	261.0	82.0	-	0.0	1-2h	500ng:250:250µl	0.314	0.0
+H. m. martinae	iv1/iv2	72.0	5.0	-	0.0	1-2h	500ng:250:250µl	0.069	0.0
+H. m. plessini	mir193	93.0	12.0	-	1.0	1-2h	500ng:500µl	0.129	0.011
+H.m. ecuadorensis	mir193	202.0	65.0	-	1.0	1-2h	500ng:500µl	0.322	0.005
+H. m. rosina	mir193	142.0	48.0	-	0.0	1-2h	500ng:500µl	0.338	0.0
+H. e. demophoon	mir193	236.0	61.0	-	2.0	1-2h	500ng:500µl	0.258	0.008
+H. e. lativitta	mir193	196.0	49.0	-	2.0	1-2h	500ng:500µl	0.25	0.01
+H. e. notabilis	mir193	374.0	74.0	-	0.0	1-2h	500ng:500µl	0.198	0.0
+H. numata	mir193	308.0	96.0	-	3.0	1-2h	500ng:500µl	0.312	0.01
+H. m. martinae	mir193	20.0	9.0	-	0.0	1-2h	500ng:500µl	0.45	0.0

@@ -1,0 +1,21 @@
+Samples ID	Genera	Species	Subspecies	Genotype	Phenotype
+WT4	Heliconius	erato	plesseni	Wid Type	Wild Type
+m01	Heliconius	erato	plesseni	mosaic deletion	Complete Mutant
+m05	Heliconius	erato	plesseni	mosaic deletion	Partial Mutant
+m09	Heliconius	erato	plesseni	not deletion	Partial Mutant
+m10	Heliconius	erato	plesseni	mosaic deletion	Partial Mutant
+m14	Heliconius	erato	plesseni	not deletion	Partial Mutant
+m21	Heliconius	erato	plesseni	mosaic deletion	Partial Mutant
+m11	Heliconius	erato	plesseni	mosaic deletion	Complete Mutant
+Mir NM1	Heliconius	erato	plesseni	mosaic deletion	Non-Mutant
+H01	Heliconius	erato	plesseni	not deletion	Partial Mutant
+WT5	Heliconius	melpomene	rosina	Wild Type	Wild Type
+m02	Heliconius	melpomene	rosina	mosaic deletion	Complete Mutant
+Mir NM2	Heliconius	melpomene	rosina	mosaic deletion	Non-Mutant
+H02	Heliconius	melpomene	rosina	not deletion	Partial Mutant
+m06	Heliconius	melpomene	martinae	mosaic deletion	Complete Mutant
+m07	Heliconius	melpomene	martinae	not deletion	Non-Mutant
+WTEC	Heliconius	melpomene	ecuadorensis	Wild Type	Wild Type
+m18	Heliconius	melpomene	ecuadorensis	mosaic deletion	Complete Mutant
+m04	Heliconius	melpomene	ecuadorensis	mosaic deletion	Complete Mutant
+m13	Heliconius	melpomene	ecuadorensis	mosaic deletion	Partial Mutant

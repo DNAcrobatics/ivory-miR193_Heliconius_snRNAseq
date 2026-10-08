@@ -54,7 +54,7 @@ Files `early_hi_vs_lo.membership.tsv`, `late_hi_vs_lo.membership.tsv`, `early_wt
 1. Confirm final panel/branch selection and DE execution settings: assay, test/filter parameters, group direction and nucleus versus replicate-level analysis. A successful call/log is useful; the four recovered tables do not need resending.
 2. Confirm corrected stages and iv_33 treatment. Saved per-cell metadata and identities are recovered; no repeat export is requested.
 3. Supply expression-object/count-matrix provenance and upstream SCT/QC/import setup for scientific reruns. Metadata cannot recover expression values or omitted history. RNA_by_Ivory construction and the final classification rule still need provenance.
-4. Reference/index/BAM commands and locus GFF, RNAhybrid inputs/full targets, Nanopore commands/depths, machine-readable supplement, enrichment background/settings, final figure assemblies, license and release DOI remain as detailed in FILE_REQUESTS.md.
+4. Reference/index/BAM commands and locus GFF, RNAhybrid inputs/full targets, collaborator attribution, enrichment background/settings, license and release DOI remain as detailed in FILE_REQUESTS.md. Supplementary tables and figure-assembly locations are now recovered; see PAPER_DOCUMENTS.md.
 
 ## Verification
 
