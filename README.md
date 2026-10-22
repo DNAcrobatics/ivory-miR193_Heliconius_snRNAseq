@@ -1,8 +1,24 @@
-# ivory:mir-193 and butterfly scale differentiation
+# ivory-miR193_Heliconius_snRNAseq
+
+### Code associated with Hanly et al. 2026
 
 Analysis code accompanying *The gene ivory:mir-193 controls scale type differentiation in Heliconius butterflies* (Nature Communications).
 
 This repository contains annotated workflows for single-nucleus RNA sequencing, scale-cell classification, differential expression, gene ontology visualization, ivory locus read visualization and miR-193 target prediction. The scripts use explicit input paths and analysis parameters, and export machine-readable results alongside figures.
+
+## Explore single-cell expression and splicing at your own locus
+
+**[Start the step-by-step scsplice tutorial →](tools/scsplice/WALKTHROUGH.md)**
+
+Use an indexed, barcode-tagged BAM and existing cell-type labels to pull out a genomic region and make **labelled expression ribbons and per-cell read/splice panels**. The tutorial walks through preparing metadata, choosing coordinates, extracting reads, interpreting the figures, zooming in and switching to another gene. It includes a Seurat metadata exporter and a Pegasus/Slurm submission wrapper.
+
+| Start here | What you will find |
+| --- | --- |
+| **[Guided walkthrough](tools/scsplice/WALKTHROUGH.md)** | Annotated commands from input files to plots |
+| [Command reference](tools/scsplice/README.md) | Options, output formats and how the ribbon calculation works |
+| [Toolkit](tools/scsplice/) | Python commands, environment, R exporter and Slurm wrapper |
+
+The workflow has two commands: **`extract`** saves matched locus reads; **`plot`** redraws the saved table by sample and cell type without rescanning the BAM. It can be reused for other genes and organisms with matching reference coordinates and barcode metadata. Ribbons report alignment starts; cell panels show aligned blocks and skipped introns. Synthetic checks pass; reproduction of the original biological figure remains to be verified.
 
 ## Analysis workflows
 
@@ -41,6 +57,7 @@ The single-nucleus workflows use R with Seurat, sctransform and SeuratDisk. Alig
 | [`metadata/`](metadata/) | Sample information, file manifests and comparison records |
 | [`envs/`](envs/README.md) | Software requirements |
 | [`archive/`](archive/README.md) | Original source files retained for provenance |
+| [`tools/scsplice/`](tools/scsplice/WALKTHROUGH.md) | Reusable single-cell locus ribbons and splice panels, with a guided tutorial |
 | [`tools/`](tools/) | Utilities for exporting saved analysis objects |
 
 Large sequencing files, BAMs and complete Seurat workspaces are not stored in this repository. Sequencing resources are associated with BioProjects [PRJNA1404329](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1404329) and [PRJNA1118807](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1118807). Input locations and checksums are recorded in [the data manifest](metadata/data_manifest.tsv).

@@ -6,6 +6,12 @@
 
 Recover per-barcode exonic/intronic coverage and the locus ribbon plot.
 
+## Reusable single-cell plotting tutorial
+
+For a guided workflow that can be applied to other loci, start with **[the scsplice walkthrough](../tools/scsplice/WALKTHROUGH.md)**. The toolkit accepts an indexed BAM and existing sample/barcode/cell-type metadata, extracts the selected region, and produces labelled read-start ribbons and per-cell aligned-block/splice-gap panels. See the [command reference](../tools/scsplice/README.md) for the preserved historical binning and explicit display options.
+
+This reusable tool has synthetic test coverage. Matching the final Figure 6A inputs and biological results remains pending, as described below.
+
 ## Inputs
 
 - Aligned BAMs with retained nucleus barcode tags and indices.
@@ -34,4 +40,4 @@ This runnable script extracts spliced alignments from supplied strand-separated 
 
 See [run commands and input formats](../scripts/README.md), [cleanup notes](../docs/CLEANUP_NOTES.md) and the [original source archive](../archive/README.md).
 
-[Return to analysis index](../README.md#analysis-index).
+[Return to analysis index](../README.md#analysis-workflows).

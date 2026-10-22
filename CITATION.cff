@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "Provisional metadata: cite the final paper and archived code release once their identifiers are added."
-title: "The gene ivory:mir-193 controls scale type differentiation in Heliconius butterflies — analysis code"
+title: "ivory-miR193_Heliconius_snRNAseq: code associated with Hanly et al. 2026"
 type: software
 authors:
   - family-names: Hanly
